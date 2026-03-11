@@ -5,6 +5,37 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Vijay Poloju - Full Stack Developer & Software Engineer specializing in Java, Spring Boot, Node.js, Angular, Python, AWS, and DevOps. 3+ years building scalable microservices. M.S. student at CU Boulder. Open to opportunities." />
+  <meta name="keywords" content="Full Stack Developer, Software Engineer, Backend Developer, Java Developer, Spring Boot, Node.js, DevOps Engineer, AWS, Cloud Engineer, Microservices, Boulder CO, Open to Work" />
+  <meta name="author" content="Vijay Poloju" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vijaypoloju.tech/" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vijaypoloju.tech/" />
+  <meta property="og:title" content="Vijay Poloju | Full Stack Developer & Software Engineer" />
+  <meta property="og:description" content="Experienced Full Stack Developer with 3+ years in Java, Spring Boot, Node.js, Angular, Python, AWS. M.S. student at CU Boulder. Open to opportunities." />
+  <meta property="og:image" content="https://vijaypoloju.tech/images/devphoto.png" />
+  <meta property="og:site_name" content="Vijay Poloju Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vijaypoloju.tech/" />
+  <meta name="twitter:title" content="Vijay Poloju | Full Stack Developer & Software Engineer" />
+  <meta name="twitter:description" content="Experienced Full Stack Developer with 3+ years in Java, Spring Boot, Node.js, Angular, Python, AWS. Open to opportunities." />
+  <meta name="twitter:image" content="https://vijaypoloju.tech/images/devphoto.png" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <title>
     Vijay Poloju | Full Stack Developer | Software Engineer | DevOps Engineer
   </title>
@@ -17,14 +48,69 @@
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured Data - Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vijay Poloju",
+    "url": "https://vijaypoloju.tech",
+    "jobTitle": "Full Stack Developer",
+    "alternateName": ["Software Engineer", "Backend Developer", "DevOps Engineer"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Get My Uri"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Colorado Boulder"
+    },
+    "knowsAbout": ["Java", "Spring Boot", "Node.js", "Angular", "Python", "AWS", "Kubernetes", "Docker", "Microservices", "DevOps", "PostgreSQL", "MongoDB", "Kafka", "CI/CD", "Terraform"],
+    "sameAs": [
+      "https://www.linkedin.com/in/mrvijay-poloju/",
+      "https://github.com/v370r",
+      "https://leetcode.com/u/vetor/",
+      "https://www.instagram.com/mrvijay.poloju/"
+    ],
+    "email": "mailto:vijay.poloju@colorado.edu",
+    "telephone": "+1-303-901-0415",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boulder",
+      "addressRegion": "CO",
+      "postalCode": "80302",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+
+  <!-- Structured Data - WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vijay Poloju Portfolio",
+    "url": "https://vijaypoloju.tech",
+    "description": "Professional portfolio of Vijay Poloju - Full Stack Developer & Software Engineer",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vijaypoloju.tech/#contact",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#home" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
   <!-- header -->
   <header class="active">
     <a href="#" class="logo">Vijay.</a>
-    <i class="bx bx-menu" id="menu-icon"></i>
-    <nav>
+    <i class="bx bx-menu" id="menu-icon" role="button" aria-label="Toggle navigation menu" tabindex="0"></i>
+    <nav role="navigation" aria-label="Main navigation">
       <a href="#" class="active">Home</a>
       <a href="#">Services</a>
       <a href="#">Resume</a>
@@ -45,7 +131,7 @@
 
 
   <!-- home section -->
-  <section class="home active">
+  <section class="home active" id="home" role="main" aria-label="Home section">
     <div class="home-detail">
       <h1>Vijay Poloju</h1>
       <h2>
@@ -56,26 +142,28 @@
         <span style="--i: 1" data-text="Software Engineer">Software Engineer</span>
       </h2>
       <p>
-        ​Experienced Full Stack Developer with over 3 years in designing scalable backend systems and dynamic frontends. 
-        Proficient in Java, Spring Boot, Node.js, Angular, Python, PostgreSQL, and AWS. Passionate about solving complex problems 
-        and building innovative solutions, focusing on microservices, cloud infrastructure, and full-stack applications.
+        Experienced Full Stack Developer with over 3 years in designing scalable backend systems and dynamic frontends.
+        Proficient in Java, Spring Boot, Node.js, Angular, Python, PostgreSQL, and AWS. Currently pursuing M.S. in Computer Science
+        at University of Colorado Boulder. Passionate about solving complex problems and building innovative solutions,
+        focusing on microservices, cloud infrastructure, and full-stack applications.
+        <span style="display: block; margin-top: 1rem; color: var(--main-color); font-weight: 500;">Available for full-time opportunities starting 2026.</span>
       </p>
       <div class="btn-sci">
-        <a href="https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/vipo4345_colorado_edu/EYqsYrLZTiFJml72AEpCjeUBew-KqkSEV_IRb1HLHe96Xw?e=eYWSte&download=1"  target="_blank" class="btn">Download CV</a>
-        <div class="sci">
-          <a href="https://leetcode.com/u/vetor/" target="_blank">
+        <a href="https://o365coloradoedu-my.sharepoint.com/:b:/g/personal/vipo4345_colorado_edu/EYqsYrLZTiFJml72AEpCjeUBew-KqkSEV_IRb1HLHe96Xw?e=eYWSte&download=1"  target="_blank" class="btn">Download Resume</a>
+        <div class="sci" role="navigation" aria-label="Social media links">
+          <a href="https://leetcode.com/u/vetor/" target="_blank" aria-label="LeetCode Profile">
             <i class="cib-leetcode"></i>
           </a>
-          <a href="https://github.com/v370r" target="_blank">
+          <a href="https://github.com/v370r" target="_blank" aria-label="GitHub Profile">
             <i class="bx bxl-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/mrvijay-poloju/" target="_blank">
+          <a href="https://www.linkedin.com/in/mrvijay-poloju/" target="_blank" aria-label="LinkedIn Profile">
             <i class="bx bxl-linkedin"></i>
           </a>
-          <a href="https://www.instagram.com/mrvijay.poloju/" target="_blank">
+          <a href="https://www.instagram.com/mrvijay.poloju/" target="_blank" aria-label="Instagram Profile">
             <i class="bx bxl-instagram-alt"></i>
           </a>
-          <a href="https://wa.link/kmpecm" target="_blank">
+          <a href="https://wa.link/kmpecm" target="_blank" aria-label="Contact on WhatsApp">
             <i class='bx bxl-whatsapp' ></i>
           </a>
         </div>
@@ -84,14 +172,14 @@
     <div class="home-img">
       <div class="img-box">
         <div class="img-item">
-          <img src="images/devphoto.png" alt="" />
+          <img src="images/devphoto.png" alt="Vijay Poloju - Full Stack Developer and Software Engineer" fetchpriority="high" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- services section -->
-  <section class="services">
+  <section class="services" id="services" aria-label="Services section">
     <h2 class="heading">My <span>Services</span></h2>
     <div class="services-container">
 
@@ -164,7 +252,7 @@
   </section>
 
   <!-- resume section -->
-  <section class="resume">
+  <section class="resume" id="resume" aria-label="Resume section">
     <div class="resume-container">
       <div class="resume-box">
         <h2>Why Hire Me?</h2>
@@ -480,7 +568,7 @@
   </section>
 
   <!-- portfolio section -->
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio" aria-label="Portfolio section">
     <h2 class="heading">Latest <span>Project</span></h2>
     <div class="portfolio-container">
       <div class="portfolio-box">
@@ -610,10 +698,10 @@
         <div class="portfolio-carousel">
           <div class="img-slide">
             <div class="img-item">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F2Pqndncryw?autoplay=1&loop=1&mute=1&playlist=F2Pqndncryw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F2Pqndncryw?autoplay=1&loop=1&mute=1&playlist=F2Pqndncryw" title="GetMyURI Project Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
             <div class="img-item">
-              <img src="images/qiskit_lsp.png" alt="" />
+              <img src="images/qiskit_lsp.png" alt="Qiskit Linter VS Code Extension - Python and Qiskit code linting tool" loading="lazy" />
             </div>
             <!-- <div class="img-item">
               <img src="images/portfolio3.jpg" alt="" />
@@ -641,19 +729,19 @@
   </section>
 
   <!-- contact section -->
-  <section class="contact">
+  <section class="contact" id="contact" aria-label="Contact section">
     <div class="contact-container">
       <div class="contact-box">
         <h2>Let's Work Together</h2>
-        <p class="desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem
-          nulla sunt, dolores quo sint nobis autem magnam at, cupiditate id
-          sapiente necessitatibus, reprehenderit animi alias dolore obcaecati
-          fugit expedita.</p>
+        <p class="desc">
+          I'm currently pursuing my Master's at University of Colorado Boulder and actively seeking full-time opportunities starting 2026.
+          Whether you have a question, a job opportunity, or just want to connect - feel free to reach out!
+        </p>
         <div class="contact-detail">
           <i class="bx bxs-phone"></i>
           <div class="detail">
             <p>Phone</p>
-            <p>(+1) 303 901 0415</p>
+            <p><a href="tel:+13039010415" style="color: var(--white-color); text-decoration: none;">(+1) 303 901 0415</a></p>
           </div>
         </div>
 
@@ -661,7 +749,7 @@
           <i class="bx bxs-envelope"></i>
           <div class="detail">
             <p>Email</p>
-            <p>vijaykumarpolojuofficial@gmail.com</p>
+            <p><a href="mailto:vijay.poloju@colorado.edu" style="color: var(--white-color); text-decoration: none;">vijay.poloju@colorado.edu</a></p>
           </div>
         </div>
 
