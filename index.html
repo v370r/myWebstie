@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Vijay Poloju - Full Stack Developer & Software Engineer specializing in Java, Spring Boot, Node.js, Angular, Python, AWS, and DevOps. 3+ years building scalable microservices. M.S. student at CU Boulder. Open to opportunities." />
+  <meta name="description" content="Vijay Poloju - Backend & Full Stack Engineer. 4+ years building scalable microservices with Java, Spring Boot, Kafka, and AWS. Open to opportunities." />
   <meta name="keywords" content="Full Stack Developer, Software Engineer, Backend Developer, Java Developer, Spring Boot, Node.js, DevOps Engineer, AWS, Cloud Engineer, Microservices, Boulder CO, Open to Work" />
   <meta name="author" content="Vijay Poloju" />
   <meta name="robots" content="index, follow" />
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vijaypoloju.tech/" />
   <meta property="og:title" content="Vijay Poloju | Full Stack Developer & Software Engineer" />
-  <meta property="og:description" content="Experienced Full Stack Developer with 3+ years in Java, Spring Boot, Node.js, Angular, Python, AWS. M.S. student at CU Boulder. Open to opportunities." />
+  <meta property="og:description" content="Backend & Full Stack Engineer. 4+ years building scalable microservices with Java, Spring Boot, Kafka, and AWS. Open to opportunities." />
   <meta property="og:image" content="https://vijaypoloju.tech/images/devphoto.png" />
   <meta property="og:site_name" content="Vijay Poloju Portfolio" />
   <meta property="og:locale" content="en_US" />
@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://vijaypoloju.tech/" />
   <meta name="twitter:title" content="Vijay Poloju | Full Stack Developer & Software Engineer" />
-  <meta name="twitter:description" content="Experienced Full Stack Developer with 3+ years in Java, Spring Boot, Node.js, Angular, Python, AWS. Open to opportunities." />
+  <meta name="twitter:description" content="Backend & Full Stack Engineer. 4+ years building scalable microservices with Java, Spring Boot, Kafka, and AWS." />
   <meta name="twitter:image" content="https://vijaypoloju.tech/images/devphoto.png" />
 
   <!-- Preconnect for performance -->
@@ -133,20 +133,58 @@
   <!-- home section -->
   <section class="home active" id="home" role="main" aria-label="Home section">
     <div class="home-detail">
-      <h1>Vijay Poloju</h1>
-      <h2>
-        I'm a
-        <span style="--i: 4" data-text="Backend Developer">Backend Developer</span>
-        <span style="--i: 3" data-text="Full Stack Developer">Full Stack Developer</span>
-        <span style="--i: 2" data-text="DevOps Engineer">DevOps Engineer</span>
-        <span style="--i: 1" data-text="Software Engineer">Software Engineer</span>
-      </h2>
-      <p>
-      Experienced Software Engineer with 4+ years building scalable distributed microservices and backend systems using Java, Spring Boot, Kafka, and AWS. Proven track record designing REST APIs, serverless architectures, and CI/CD pipelines. Led monolith-to-microservices modernization at ADP Vantage, architected serverless AWS infrastructure from scratch, and built Kafka-based event-driven pipelines processing millions of events daily.
-        <span style="display: block; margin-top: 1rem; color: var(--main-color); font-weight: 500;">Open to opportunities in the Bay Area and beyond.</span>
-      </p>
-      <div class="btn-sci">
-        <a href="resume/resume-compact.pdf"  target="_blank" class="btn">Download Resume</a>
+      <div class="card-top">
+        <div class="card-info">
+          <h1>Vijay Poloju</h1>
+          <h2>
+            <span class="role-title">Full Stack Engineer</span>
+            <span class="subtitle">Java · Python · TypeScript · React · Next.js · Angular · AWS · Kafka</span>
+          </h2>
+          <p class="tagline">
+            4+ years building full-stack applications across microservices, cloud, and distributed systems.
+            From monolith-to-microservices migrations to event-driven architectures processing millions of events daily.
+          </p>
+          <div class="badges-row">
+            <span class="open-badge"><i class='bx bx-briefcase'></i> Open to opportunities in Bay Area & beyond</span>
+            <span class="open-badge"><i class='bx bx-map'></i> Willing to relocate anywhere in US</span>
+          </div>
+          <div class="contact-row">
+            <a href="mailto:vijaykumarpolojuofficial@gmail.com" class="contact-email">
+              <i class='bx bx-envelope'></i> vijaykumarpolojuofficial@gmail.com
+            </a>
+          </div>
+          <div class="btn-group">
+            <a href="resume/resume-compact.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+            <a href="#" class="btn btn-secondary" id="view-services-btn">View Services <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </div>
+        <div class="home-img">
+          <div class="img-box">
+            <div class="img-item">
+              <img src="images/devphoto.png" alt="Vijay Poloju - Software Engineer" fetchpriority="high" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-value">4+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">1M+</span>
+          <span class="stat-label">Events/Day via Kafka</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">500+</span>
+          <span class="stat-label">Enterprise Clients (ADP)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">200K+</span>
+          <span class="stat-label">Requests/Sec Handled</span>
+        </div>
+      </div>
+      <div class="sci-bottom">
         <div class="sci" role="navigation" aria-label="Social media links">
           <a href="https://leetcode.com/u/vetor/" target="_blank" aria-label="LeetCode Profile">
             <i class="cib-leetcode"></i>
@@ -161,15 +199,8 @@
             <i class="bx bxl-instagram-alt"></i>
           </a>
           <a href="https://wa.link/kmpecm" target="_blank" aria-label="Contact on WhatsApp">
-            <i class='bx bxl-whatsapp' ></i>
+            <i class='bx bxl-whatsapp'></i>
           </a>
-        </div>
-      </div>
-    </div>
-    <div class="home-img">
-      <div class="img-box">
-        <div class="img-item">
-          <img src="images/devphoto.png" alt="Vijay Poloju - Full Stack Developer and Software Engineer" fetchpriority="high" />
         </div>
       </div>
     </div>

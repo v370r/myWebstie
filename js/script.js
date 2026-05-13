@@ -58,6 +58,15 @@ logoLink.addEventListener('click', () => {
   }
 });
 
+// "View Services" button on landing page
+const servicesBtn = document.getElementById('view-services-btn');
+if (servicesBtn) {
+  servicesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    navLinks[1]?.click(); // Services is the 2nd nav link
+  });
+}
+
 const resumeBtns = document.querySelectorAll(".resume-btn");
 
 resumeBtns.forEach((btn, idx) => {
