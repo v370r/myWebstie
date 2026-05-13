@@ -180,10 +180,10 @@
     <h2 class="heading">My <span>Services</span></h2>
     <div class="services-container">
 
-      <div class="services-box">
+      <div class="services-box" data-service="backend" role="button" tabindex="0" aria-label="View Backend Development details">
         <div class="icon">
           <i class="cib-spring"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>Backend Development</h3>
         <p>
@@ -191,10 +191,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="web" role="button" tabindex="0" aria-label="View Web Development details">
         <div class="icon">
           <i class="bx bx-code-alt"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>Web Development</h3>
         <p>
@@ -202,10 +202,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="devops" role="button" tabindex="0" aria-label="View DevOps & Cloud Solutions details">
         <div class="icon">
           <i class="cib-google-cloud"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>DevOps & Cloud Solutions</h3>
         <p>
@@ -213,10 +213,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="analytics" role="button" tabindex="0" aria-label="View Data Analytics & Automation details">
         <div class="icon">
           <i class="bx bx-bar-chart-alt-2"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>Data Analytics & Automation</h3>
         <p>
@@ -224,10 +224,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="system-design" role="button" tabindex="0" aria-label="View System Design & Architecture details">
         <div class="icon">
           <i class="bx bx-network-chart"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>System Design & Architecture</h3>
         <p>
@@ -235,10 +235,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="testing" role="button" tabindex="0" aria-label="View Software Testing & Quality Assurance details">
         <div class="icon">
           <i class="bx bx-bug"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>Software Testing & Quality Assurance</h3>
         <p>
@@ -246,10 +246,10 @@
         </p>
       </div>
 
-      <div class="services-box">
+      <div class="services-box" data-service="ai-llm" role="button" tabindex="0" aria-label="View AI & LLM Solutions details">
         <div class="icon">
           <i class="bx bx-brain"></i>
-          <a href="#"><i class="bx bx-arrow-back"></i></a>
+          <a href="#" onclick="event.stopPropagation()"><i class="bx bx-arrow-back"></i></a>
         </div>
         <h3>AI & LLM Solutions</h3>
         <p>
@@ -257,6 +257,27 @@
         </p>
       </div>
     </div>
+  </section>
+
+  <!-- Service Detail Modal -->
+  <div class="service-modal-overlay" id="serviceModal" aria-hidden="true">
+    <div class="service-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-description"></p>
+        <div class="modal-metrics" id="modal-metrics"></div>
+        <div class="modal-section">
+          <h3>Recent Work</h3>
+          <div id="modal-experience"></div>
+        </div>
+        <div class="modal-section">
+          <h3>Tech Stack</h3>
+          <div class="modal-tech-stack" id="modal-tech"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   </section>
 
   <!-- resume section -->
