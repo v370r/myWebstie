@@ -201,7 +201,7 @@ const serviceData = {
     tech: ['Java', 'Spring Boot', 'PostgreSQL', 'MongoDB', 'Kafka', 'Redis', 'REST APIs', 'GraphQL', 'AWS CDK', 'Lambda', 'Aurora Serverless', 'EventBridge']
   },
   web: {
-    title: 'Web <span>Development</span>',
+    title: 'Web <span>Application Development</span>',
     description: 'Building dynamic and scalable web applications using Java, Spring Boot, Node.js, Angular, and React. From responsive frontends to full-stack applications with modern frameworks and CI/CD pipelines.',
     metrics: [
       { value: '45%', label: 'Better page performance' },
@@ -374,8 +374,8 @@ const openModal = (serviceKey) => {
     `<div class="metric-item"><span class="metric-value">${m.value}</span><span class="metric-label">${m.label}</span></div>`
   ).join('');
 
-  modalExperience.innerHTML = data.experience.map(exp =>
-    `<div class="modal-exp-item">
+  modalExperience.innerHTML = data.experience.map((exp, i) =>
+    `<div class="modal-exp-item modal-exp-reveal" style="transition-delay: ${0.3 + i * 0.12}s">
       <div class="exp-role">${exp.role}</div>
       <div class="exp-company">${exp.company}</div>
       <div class="exp-desc">${exp.desc}</div>
@@ -389,12 +389,29 @@ const openModal = (serviceKey) => {
   modalOverlay.classList.add('active');
   modalOverlay.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+
+  // Staggered section reveal
+  const revealSections = modalOverlay.querySelectorAll('.modal-section-reveal');
+  revealSections.forEach(s => s.classList.remove('revealed'));
+
+  requestAnimationFrame(() => {
+    revealSections.forEach((section, i) => {
+      setTimeout(() => section.classList.add('revealed'), 150 * (i + 1));
+    });
+  });
 };
 
 const closeModal = () => {
   modalOverlay.classList.remove('active');
   modalOverlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  // Reset reveal states for next open
+  const revealSections = modalOverlay.querySelectorAll('.modal-section-reveal');
+  revealSections.forEach(s => s.classList.remove('revealed'));
+  const expItems = modalOverlay.querySelectorAll('.modal-exp-reveal');
+  expItems.forEach(item => {
+    item.style.transitionDelay = '';
+  });
 };
 
 document.querySelectorAll('.services-box[role="button"]').forEach(box => {
