@@ -574,6 +574,69 @@ section.active {
     transform: scale(1);
 }
 
+/* Size Simple Icons SVGs to match Font Awesome icon dimensions */
+.resume-detail.skills .resume-item img,
+.resume-detail.ai-llm .resume-item img {
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0) invert(1);
+}
+
+.resume-detail.ai-llm .resume-list {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    height: auto;
+    overflow: visible;
+}
+
+.resume-detail.ai-llm .resume-item {
+    position: relative;
+    align-items: center;
+    height: auto;
+}
+
+.resume-detail.ai-llm .resume-item i {
+    font-size: 8.5rem;
+    transition: .5s;
+}
+
+.resume-detail.ai-llm .resume-item:hover i {
+    color: var(--main-color);
+}
+
+.resume-detail.ai-llm .resume-item span {
+    position: absolute;
+    top: 20%;
+    background: var(--white-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.resume-detail.ai-llm .resume-item:hover span {
+    top: -25%;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Monochrome for all skill images - match Font Awesome icons */
+.resume-detail.ai-llm .resume-item img {
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0) invert(1);
+}
+
+.resume-detail.skills .resume-item:hover img,
+.resume-detail.ai-llm .resume-item:hover img {
+    filter: none;
+}
+
 .resume-detail.about .resume-list {
     height: auto;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

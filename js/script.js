@@ -102,11 +102,11 @@ const activePortfolio = () => {
 };
 
 arrowRight.addEventListener('click', () => {
-  if (index < 4) {
+  if (index < 2) {
     index++;
     arrowLeft.classList.remove("disabled");
   } else {
-    index = 5;
+    index = 3;
     arrowRight.classList.add("disabled");
   }
 
@@ -115,7 +115,7 @@ arrowRight.addEventListener('click', () => {
 
 
 arrowLeft.addEventListener("click", () => {
-  if (index > 1) {
+  if (index > 0) {
     index--;
     arrowRight.classList.remove("disabled");
   } else {
@@ -125,3 +125,47 @@ arrowLeft.addEventListener("click", () => {
 
   activePortfolio();
 });
+
+// Contact form submission via fetch (no redirect)
+const contactForm = document.querySelector('form[action*="formsubmit.co"]');
+const formStatus = document.querySelector('.form-status');
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formStatus.style.display = 'block';
+        formStatus.style.color = '#7cf03d';
+        formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+        contactForm.reset();
+      } else {
+        formStatus.style.display = 'block';
+        formStatus.style.color = '#ff6b6b';
+        formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+      }
+    } catch (err) {
+      formStatus.style.display = 'block';
+      formStatus.style.color = '#ff6b6b';
+      formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+    }
+
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+
+    setTimeout(() => {
+      formStatus.style.display = 'none';
+    }, 8000);
+  });
+}
