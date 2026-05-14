@@ -321,10 +321,19 @@
   <!-- resume section -->
   <section class="resume" id="resume" aria-label="Resume section">
     <h2 class="heading">My <span>Resume</span></h2>
-    <div class="resume-container">
-      <!-- Timeline column -->
-      <div class="resume-column">
-        <h3 class="resume-heading">Experience</h3>
+
+    <!-- Pill tab bar -->
+    <div class="resume-tabs" role="tablist" aria-label="Resume sections">
+      <button class="resume-tab active" role="tab" aria-selected="true" data-tab="experience">Experience</button>
+      <button class="resume-tab" role="tab" aria-selected="false" data-tab="education">Education</button>
+      <button class="resume-tab" role="tab" aria-selected="false" data-tab="skills">Skills</button>
+      <button class="resume-tab" role="tab" aria-selected="false" data-tab="ai-llm">AI &amp; LLM</button>
+    </div>
+
+    <div class="resume-panels">
+
+      <!-- Experience panel -->
+      <div class="resume-panel active" id="panel-experience" role="tabpanel">
         <div class="timeline">
           <div class="timeline-line"></div>
 
@@ -475,92 +484,85 @@
         </div>
       </div>
 
-      <!-- Right column: Education, Skills, AI/LLM -->
-      <div class="resume-column">
-
-        <!-- Education -->
-        <div class="resume-subsection">
-          <h3 class="resume-heading">Education</h3>
-          <div class="education-grid">
-            <div class="education-card">
-              <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
-              <h4>M.S. Computer Science</h4>
-              <p class="edu-school">University of Colorado Boulder</p>
-              <p class="edu-year">2024-2026 · GPA: 3.8/4.0</p>
-              <p class="edu-detail">GenAI Software Development, Big Data Architecture, Linux System Administration, CS Capstone (sponsor pWin.ai)</p>
-            </div>
-            <div class="education-card">
-              <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
-              <h4>B.Tech</h4>
-              <p class="edu-school">Indian Institute of Technology Hyderabad</p>
-              <p class="edu-year">2017-2021 · GPA: 3.7/4</p>
-              <p class="edu-detail">Data Structures and Algorithms, Data Analytics, AI and ML, Statistics, Software Engineering</p>
-            </div>
+      <!-- Education panel -->
+      <div class="resume-panel" id="panel-education" role="tabpanel">
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
+            <h4>M.S. Computer Science</h4>
+            <p class="edu-school">University of Colorado Boulder</p>
+            <p class="edu-year">2024-2026 · GPA: 3.8/4.0</p>
+            <p class="edu-detail">GenAI Software Development, Big Data Architecture, Linux System Administration, CS Capstone (sponsor pWin.ai)</p>
+          </div>
+          <div class="education-card">
+            <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
+            <h4>B.Tech</h4>
+            <p class="edu-school">Indian Institute of Technology Hyderabad</p>
+            <p class="edu-year">2017-2021 · GPA: 3.7/4</p>
+            <p class="edu-detail">Data Structures and Algorithms, Data Analytics, AI and ML, Statistics, Software Engineering</p>
           </div>
         </div>
-
-        <!-- Skills -->
-        <div class="resume-subsection">
-          <h3 class="resume-heading">Skills</h3>
-          <div class="skills-grid" id="skills-grid">
-            <div class="skill-item"><i class="bx bxl-java"></i><span>Java</span></div>
-            <div class="skill-item"><i class="cib-spring"></i><span>Spring Boot</span></div>
-            <div class="skill-item"><i class="bx bxl-python"></i><span>Python</span></div>
-            <div class="skill-item"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
-            <div class="skill-item"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
-            <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-            <div class="skill-item"><i class="bx bxl-nodejs"></i><span>Node.js</span></div>
-            <div class="skill-item"><i class="bx bxl-angular"></i><span>Angular</span></div>
-            <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
-            <div class="skill-item"><i class="fa-solid fa-bolt"></i><span>Next.js</span></div>
-            <div class="skill-item"><i class="fa-solid fa-arrows-spin"></i><span>CI/CD</span></div>
-            <div class="skill-item"><i class="bx bxl-docker"></i><span>Docker</span></div>
-            <div class="skill-item"><i class="bx bxl-kubernetes"></i><span>Kubernetes</span></div>
-            <div class="skill-item"><i class="fa-brands fa-jenkins"></i><span>Jenkins</span></div>
-            <div class="skill-item"><i class="bx bxl-git"></i><span>Git</span></div>
-            <div class="skill-item"><i class="bx bxl-github"></i><span>GitHub Actions</span></div>
-            <div class="skill-item"><i class="bx bxl-aws"></i><span>AWS</span></div>
-            <div class="skill-item"><i class="fa-brands fa-aws"></i><span>Lambda</span></div>
-            <div class="skill-item"><i class="fa-solid fa-server"></i><span>Serverless</span></div>
-            <div class="skill-item"><i class="fa-solid fa-code-branch"></i><span>Terraform</span></div>
-            <div class="skill-item"><i class="fa-solid fa-vial"></i><span>Selenium BDD</span></div>
-            <div class="skill-item"><i class="fa-solid fa-chart-line"></i><span>CloudWatch</span></div>
-            <div class="skill-item"><i class="fa-solid fa-microchip"></i><span>JMeter</span></div>
-            <div class="skill-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
-            <div class="skill-item"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
-            <div class="skill-item"><i class="fa-solid fa-terminal"></i><span>Bash</span></div>
-            <div class="skill-item"><i class="bx bxl-visual-studio"></i><span>VS Code</span></div>
-            <div class="skill-item"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
-          </div>
-        </div>
-
-        <!-- AI & LLM -->
-        <div class="resume-subsection">
-          <h3 class="resume-heading">AI & LLM Systems</h3>
-          <div class="skills-grid ai-llm-grid" id="ai-llm-grid">
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" /><span>Claude Code</span></div>
-            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="Codex" loading="lazy" /><span>Codex</span></div>
-            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-source-initiative.svg" alt="Open Source" loading="lazy" /><span>Open Source LLMs</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain" alt="LangChain" loading="lazy" /><span>LangChain</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/langgraph" alt="LangGraph" loading="lazy" /><span>LangGraph</span></div>
-            <div class="skill-item"><i class="fa-solid fa-layer-group"></i><span>RAG Pipelines</span></div>
-            <div class="skill-item"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
-            <div class="skill-item"><i class="fa-solid fa-microscope"></i><span>LLM Fine-tuning</span></div>
-            <div class="skill-item"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Prompt Engineering</span></div>
-            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postgresql.svg" alt="pgvector" loading="lazy" /><span>pgvector</span></div>
-            <div class="skill-item"><i class="fa-solid fa-database"></i><span>FAISS</span></div>
-            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hugging-face.svg" alt="Hugging Face" loading="lazy" /><span>Hugging Face</span></div>
-            <div class="skill-item"><i class="fa-solid fa-shield-halved"></i><span>Evals & Guardrails</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" /><span>Streamlit</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic" alt="Anthropic" loading="lazy" /><span>Anthropic</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/hermes" alt="Hermes" loading="lazy" /><span>Hermes</span></div>
-            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg" alt="OpenClaw" loading="lazy" /><span>OpenClaw</span></div>
-            <div class="skill-item"><img src="https://cdn.simpleicons.org/qiskit" alt="Qiskit" loading="lazy" /><span>Qiskit</span></div>
-            <div class="skill-item"><i class="fa-solid fa-sitemap"></i><span>Transfer Learning</span></div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Skills panel -->
+      <div class="resume-panel" id="panel-skills" role="tabpanel">
+        <div class="skills-grid" id="skills-grid">
+          <div class="skill-item"><i class="bx bxl-java"></i><span>Java</span></div>
+          <div class="skill-item"><i class="cib-spring"></i><span>Spring Boot</span></div>
+          <div class="skill-item"><i class="bx bxl-python"></i><span>Python</span></div>
+          <div class="skill-item"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
+          <div class="skill-item"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
+          <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+          <div class="skill-item"><i class="bx bxl-nodejs"></i><span>Node.js</span></div>
+          <div class="skill-item"><i class="bx bxl-angular"></i><span>Angular</span></div>
+          <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-item"><i class="fa-solid fa-bolt"></i><span>Next.js</span></div>
+          <div class="skill-item"><i class="fa-solid fa-arrows-spin"></i><span>CI/CD</span></div>
+          <div class="skill-item"><i class="bx bxl-docker"></i><span>Docker</span></div>
+          <div class="skill-item"><i class="bx bxl-kubernetes"></i><span>Kubernetes</span></div>
+          <div class="skill-item"><i class="fa-brands fa-jenkins"></i><span>Jenkins</span></div>
+          <div class="skill-item"><i class="bx bxl-git"></i><span>Git</span></div>
+          <div class="skill-item"><i class="bx bxl-github"></i><span>GitHub Actions</span></div>
+          <div class="skill-item"><i class="bx bxl-aws"></i><span>AWS</span></div>
+          <div class="skill-item"><i class="fa-brands fa-aws"></i><span>Lambda</span></div>
+          <div class="skill-item"><i class="fa-solid fa-server"></i><span>Serverless</span></div>
+          <div class="skill-item"><i class="fa-solid fa-code-branch"></i><span>Terraform</span></div>
+          <div class="skill-item"><i class="fa-solid fa-vial"></i><span>Selenium BDD</span></div>
+          <div class="skill-item"><i class="fa-solid fa-chart-line"></i><span>CloudWatch</span></div>
+          <div class="skill-item"><i class="fa-solid fa-microchip"></i><span>JMeter</span></div>
+          <div class="skill-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+          <div class="skill-item"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
+          <div class="skill-item"><i class="fa-solid fa-terminal"></i><span>Bash</span></div>
+          <div class="skill-item"><i class="bx bxl-visual-studio"></i><span>VS Code</span></div>
+          <div class="skill-item"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
+        </div>
+      </div>
+
+      <!-- AI & LLM panel -->
+      <div class="resume-panel" id="panel-ai-llm" role="tabpanel">
+        <div class="skills-grid ai-llm-grid" id="ai-llm-grid">
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" /><span>Claude Code</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="Codex" loading="lazy" /><span>Codex</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-source-initiative.svg" alt="Open Source" loading="lazy" /><span>Open Source LLMs</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain" alt="LangChain" loading="lazy" /><span>LangChain</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/langgraph" alt="LangGraph" loading="lazy" /><span>LangGraph</span></div>
+          <div class="skill-item"><i class="fa-solid fa-layer-group"></i><span>RAG Pipelines</span></div>
+          <div class="skill-item"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
+          <div class="skill-item"><i class="fa-solid fa-microscope"></i><span>LLM Fine-tuning</span></div>
+          <div class="skill-item"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Prompt Engineering</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postgresql.svg" alt="pgvector" loading="lazy" /><span>pgvector</span></div>
+          <div class="skill-item"><i class="fa-solid fa-database"></i><span>FAISS</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hugging-face.svg" alt="Hugging Face" loading="lazy" /><span>Hugging Face</span></div>
+          <div class="skill-item"><i class="fa-solid fa-shield-halved"></i><span>Evals &amp; Guardrails</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" /><span>Streamlit</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic" alt="Anthropic" loading="lazy" /><span>Anthropic</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/hermes" alt="Hermes" loading="lazy" /><span>Hermes</span></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg" alt="OpenClaw" loading="lazy" /><span>OpenClaw</span></div>
+          <div class="skill-item"><img src="https://cdn.simpleicons.org/qiskit" alt="Qiskit" loading="lazy" /><span>Qiskit</span></div>
+          <div class="skill-item"><i class="fa-solid fa-sitemap"></i><span>Transfer Learning</span></div>
+        </div>
+      </div>
+
     </div>
   </section>
 

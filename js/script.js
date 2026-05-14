@@ -178,6 +178,26 @@ if (contactForm && formStatus) {
   });
 }
 
+// Resume pill tab switching
+document.querySelectorAll('.resume-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active from all tabs and panels
+    document.querySelectorAll('.resume-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.resume-panel').forEach(p => {
+      p.classList.remove('active');
+    });
+
+    // Activate clicked tab and its panel
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    const panelId = `panel-${tab.dataset.tab}`;
+    document.getElementById(panelId)?.classList.add('active');
+  });
+});
+
 // Service detail modals
 const serviceData = {
   backend: {
