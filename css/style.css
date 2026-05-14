@@ -1403,21 +1403,21 @@ section.active {
         padding: 2rem 4%;
     }
 
+    /* Tablet: hide all sections except active to prevent stacking */
     section {
+        display: none !important;
+    }
+
+    section.active {
+        display: block !important;
         position: relative !important;
         height: auto !important;
         min-height: auto !important;
         padding: 80px 4% 3rem !important;
         overflow: visible !important;
-    }
-
-    section.active {
-        position: relative !important;
-        height: auto !important;
-        min-height: auto !important;
-        animation: none;
-        visibility: visible;
-        opacity: 1;
+        animation: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     header {
@@ -1433,6 +1433,7 @@ section.active {
     }
 }
 
+/* Mobile section switching: hide all sections, show only active */
 @media screen and (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -1550,6 +1551,23 @@ section.active {
         margin-bottom: 1.5rem;
     }
 
+    /* Resume list: constrained height with scroll for long content */
+    .resume-detail .resume-list {
+        max-height: 55rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 0.5rem;
+    }
+
+    .resume-detail .resume-list::-webkit-scrollbar {
+        width: .5rem;
+    }
+
+    .resume-detail .resume-list::-webkit-scrollbar-thumb {
+        background: var(--main-color);
+        border-radius: 1rem;
+    }
+
     .resume-list {
         height: auto;
         overflow: visible;
@@ -1560,11 +1578,17 @@ section.active {
     .resume-list .resume-item {
         height: auto;
         min-height: auto;
-        padding: 2rem 1.8rem;
+        padding: 1.5rem 1.5rem;
     }
 
+    /* Resume items: compact on mobile */
     .resume-item h3 {
         font-size: 1.8rem;
+    }
+
+    .resume-item p {
+        font-size: 1.3rem;
+        line-height: 1.5;
     }
 
     .resume-box .heading {
@@ -1633,28 +1657,23 @@ section.active {
         margin-top: 0.3rem;
     }
 
-    /* All sections: no forced min-height, let content dictate size */
+    /* CRITICAL FIX: On mobile, hide all sections except active using display:none
+       instead of visibility/opacity — this prevents invisible sections from taking
+       up vertical space and creating massive blank areas */
     section {
+        display: none !important;
+    }
+
+    section.active {
+        display: block !important;
         position: relative !important;
         height: auto !important;
         min-height: auto !important;
         padding: 80px 4% 3rem !important;
         overflow: visible !important;
-    }
-
-    section.active {
-        position: relative !important;
-        height: auto !important;
-        min-height: auto !important;
-        animation: none;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    header {
-        animation: none;
-        visibility: visible;
-        opacity: 1;
+        animation: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* Home section: consistent with other sections */
@@ -1700,6 +1719,36 @@ section.active {
 
     .sci-bottom .sci a {
         margin: 0 0.4rem;
+    }
+
+    /* Portfolio carousel: ensure proper height on mobile */
+    .portfolio-carousel {
+        height: auto !important;
+        aspect-ratio: 16 / 10;
+    }
+
+    .portfolio-detail.active {
+        display: block;
+    }
+
+    .portfolio-detail {
+        display: none;
+    }
+
+    /* Contact form: compact spacing on mobile */
+    .contact-box .field-box textarea {
+        height: 15rem;
+    }
+
+    /* Header: no animation on mobile */
+    header {
+        animation: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .bars-box {
+        display: none !important;
     }
 }
 
