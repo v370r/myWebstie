@@ -196,27 +196,6 @@ section.active {
     padding-top: 3rem;
 }
 
-/* Mobile: allow home section to grow beyond viewport height */
-@media screen and (max-width: 768px) {
-    .home {
-        padding-top: 80px;
-        min-height: 100vh;
-        height: auto;
-        position: relative;
-        align-items: flex-start;
-    }
-
-    .card-top {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-top: 1.5rem;
-    }
-
-    .home-img {
-        flex-shrink: 0;
-        margin-bottom: 1.5rem;
-    }
-}
 
 .home-detail {
     width: 100%;
@@ -1426,8 +1405,8 @@ section.active {
     section {
         position: relative;
         height: auto;
-        min-height: 100vh;
-        padding: 10rem 4% 2rem;
+        min-height: auto;
+        padding: 80px 4% 3rem;
         overflow: visible;
     }
 
@@ -1498,7 +1477,7 @@ section.active {
     /* Services: larger tap targets, less padding on cards */
     .services-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .services-container .services-box {
@@ -1546,9 +1525,8 @@ section.active {
         display: inline-block;
         margin-right: 0.8rem;
         margin-bottom: 0.8rem;
-        height: 4rem;
-        padding: 0 1.5rem;
-        width: auto;
+        height: 3.5rem;
+        padding: 0 1.2rem;
         font-size: 1.3rem;
     }
 
@@ -1651,12 +1629,12 @@ section.active {
         margin-top: 0.3rem;
     }
 
-    /* Mobile: override absolute section layout for scrollable content */
+    /* All sections: no forced min-height, let content dictate size */
     section {
         position: relative;
         height: auto;
-        min-height: 100vh;
-        padding: 90px 4% 2rem;
+        min-height: auto;
+        padding: 80px 4% 3rem;
         overflow: visible;
     }
 
@@ -1664,13 +1642,57 @@ section.active {
         animation: none;
         visibility: visible;
         opacity: 1;
-        padding-top: 90px;
     }
 
     header {
         animation: none;
         visibility: visible;
         opacity: 1;
+    }
+
+    /* Home section: consistent with other sections */
+    .home {
+        padding-top: 80px;
+        min-height: auto;
+        height: auto;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .card-top {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 1.5rem;
+        gap: 2rem;
+    }
+
+    .home-img {
+        flex-shrink: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-img .img-box {
+        width: clamp(20rem, 55vw, 26rem);
+        height: clamp(20rem, 55vw, 26rem);
+    }
+
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+        width: clamp(22rem, 60vw, 28rem);
+        height: clamp(22rem, 60vw, 28rem);
+    }
+
+    .home-img .img-box .img-item img {
+        object-position: center 20%;
+    }
+
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .sci-bottom .sci a {
+        margin: 0 0.4rem;
     }
 }
 
@@ -1769,36 +1791,6 @@ section.active {
     }
 }
 
-/* Mobile */
-@media screen and (max-width: 768px) {
-    .card-top {
-        gap: 2rem;
-    }
-
-    .stats-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .home-img .img-box {
-        width: clamp(20rem, 55vw, 26rem);
-        height: clamp(20rem, 55vw, 26rem);
-    }
-
-    .home-img .img-box::before,
-    .home-img .img-box::after {
-        width: clamp(22rem, 60vw, 28rem);
-        height: clamp(22rem, 60vw, 28rem);
-    }
-
-    .home-img .img-box .img-item img {
-        object-position: center 20%;
-    }
-
-    .sci-bottom .sci a {
-        margin: 0 0.4rem;
-    }
-}
 
 /* Small mobile */
 @media screen and (max-width: 450px) {
@@ -1888,25 +1880,3 @@ section.active {
     }
 }
 
-/* Mobile: fix all sections layout (not just .home) */
-@media screen and (max-width: 768px) {
-    section {
-        position: relative;
-        height: auto;
-        min-height: 100vh;
-        padding-top: 90px;
-        overflow: auto;
-    }
-
-    section.active {
-        animation: none;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    header {
-        visibility: visible;
-        opacity: 1;
-        animation: none;
-    }
-}
