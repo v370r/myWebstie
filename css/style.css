@@ -1652,3 +1652,26 @@ section.active {
         font-size: 1.15rem;
     }
 }
+
+/* Mobile: fix all sections layout (not just .home) */
+@media screen and (max-width: 768px) {
+    section {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 90px;
+        overflow: auto;
+    }
+
+    section.active {
+        animation: none;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header {
+        visibility: visible;
+        opacity: 1;
+        animation: none;
+    }
+}
