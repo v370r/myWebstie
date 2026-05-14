@@ -60,7 +60,8 @@ html {
 
 
 body {
-    color: var(--white-color)
+    color: var(--white-color);
+    background: var(--bg-color);
 }
 
 /* Prevent iOS overscroll bounce that clips content behind navbar */
