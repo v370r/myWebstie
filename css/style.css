@@ -1495,6 +1495,162 @@ section.active {
         grid-template-columns: repeat(2,1fr);
     }
 
+    /* Services: larger tap targets, less padding on cards */
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-container .services-box {
+        padding: 2rem 1.8rem;
+    }
+
+    .services-box .icon i {
+        font-size: 3.5rem;
+    }
+
+    .services-box .icon a {
+        padding: 0.7rem;
+    }
+
+    .services-box .icon a i {
+        font-size: 2.2rem;
+    }
+
+    .services-box h3 {
+        font-size: 2.2rem;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .services-box p {
+        font-size: 1.4rem;
+    }
+
+    .services-box .card-cta {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    /* Resume: remove fixed-height scroll box, let content flow naturally */
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .resume-box:first-child {
+        order: -1;
+    }
+
+    .resume-box:first-child .resume-btn {
+        width: auto;
+        display: inline-block;
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
+        height: 4rem;
+        padding: 0 1.5rem;
+        width: auto;
+        font-size: 1.3rem;
+    }
+
+    .resume-box:first-child {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .resume-box:first-child h2,
+    .resume-box:first-child .desc {
+        width: 100%;
+    }
+
+    .resume-box:first-child .desc {
+        margin-bottom: 1.5rem;
+    }
+
+    .resume-list {
+        height: auto;
+        overflow: visible;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .resume-list .resume-item {
+        height: auto;
+        min-height: auto;
+        padding: 2rem 1.8rem;
+    }
+
+    .resume-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .resume-box .heading {
+        font-size: 2.8rem;
+    }
+
+    .resume-box .desc {
+        font-size: 1.4rem;
+    }
+
+    .resume-item .company {
+        margin-left: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .resume-item .year {
+        font-size: 1.4rem;
+    }
+
+    .resume-item .company::before {
+        margin-left: -1.5rem;
+    }
+
+    /* Skills grid on mobile */
+    .resume-detail.skills .resume-list,
+    .resume-detail.ai-llm .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1.2rem;
+    }
+
+    .resume-detail.skills .resume-item i,
+    .resume-detail.ai-llm .resume-item i {
+        font-size: 6rem;
+    }
+
+    .resume-detail.skills .resume-item img,
+    .resume-detail.ai-llm .resume-item img {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .resume-detail.skills .resume-item span,
+    .resume-detail.ai-llm .resume-item span {
+        font-size: 1.3rem;
+    }
+
+    /* About Me: compact grid on mobile */
+    .resume-detail.about .resume-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .resume-detail.about .resume-item {
+        height: auto;
+        padding: 1.2rem;
+    }
+
+    .resume-detail.about .resume-item p {
+        font-size: 1.3rem;
+    }
+
+    .resume-detail.about .resume-item span {
+        display: block;
+        color: var(--main-color);
+        font-weight: 500;
+        margin-top: 0.3rem;
+    }
+
     /* Mobile: override absolute section layout for scrollable content */
     section {
         position: relative;
@@ -1688,6 +1844,47 @@ section.active {
 
     .open-badge {
         font-size: 1.15rem;
+    }
+
+    /* Services: even more compact on small screens */
+    .services-container .services-box {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .services-box .icon i {
+        font-size: 3rem;
+    }
+
+    .services-box h3 {
+        font-size: 1.8rem;
+        margin: 0.4rem 0 0.8rem;
+    }
+
+    .services-box p {
+        font-size: 1.3rem;
+    }
+
+    /* About Me: single column on very small screens */
+    .resume-detail.about .resume-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills: smaller grid on very small screens */
+    .resume-detail.skills .resume-list,
+    .resume-detail.ai-llm .resume-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .resume-detail.skills .resume-item i,
+    .resume-detail.ai-llm .resume-item i {
+        font-size: 4.5rem;
+    }
+
+    .resume-detail.skills .resume-item img,
+    .resume-detail.ai-llm .resume-item img {
+        width: 4rem;
+        height: 4rem;
     }
 }
 
