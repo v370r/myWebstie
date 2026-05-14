@@ -63,6 +63,11 @@ body {
     color: var(--white-color)
 }
 
+/* Prevent iOS overscroll bounce that clips content behind navbar */
+html {
+    overscroll-behavior: none;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -191,22 +196,16 @@ section.active {
     padding-top: 3rem;
 }
 
-/* Ensure home section content clears fixed navbar */
+/* Mobile: ensure home section clears fixed navbar even with reduced font-size */
 @media screen and (max-width: 992px) {
     .home {
-        padding-top: 14rem;
+        padding-top: 10rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .home {
-        padding-top: 18rem;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .home {
-        padding-top: 20rem;
+        padding-top: 8rem;
     }
 }
 
