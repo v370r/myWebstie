@@ -1424,7 +1424,23 @@ section.active {
     }
 
     section {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
         padding: 10rem 4% 2rem;
+        overflow: visible;
+    }
+
+    section.active {
+        animation: none;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header {
+        animation: none;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -1477,6 +1493,28 @@ section.active {
 
     .contact-box .field-box {
         grid-template-columns: repeat(2,1fr);
+    }
+
+    /* Mobile: override absolute section layout for scrollable content */
+    section {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        padding: 90px 4% 2rem;
+        overflow: visible;
+    }
+
+    section.active {
+        animation: none;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 90px;
+    }
+
+    header {
+        animation: none;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
