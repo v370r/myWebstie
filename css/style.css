@@ -1404,14 +1404,17 @@ section.active {
     }
 
     section {
-        position: relative;
-        height: auto;
-        min-height: auto;
-        padding: 80px 4% 3rem;
-        overflow: visible;
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 80px 4% 3rem !important;
+        overflow: visible !important;
     }
 
     section.active {
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
         animation: none;
         visibility: visible;
         opacity: 1;
@@ -1632,14 +1635,17 @@ section.active {
 
     /* All sections: no forced min-height, let content dictate size */
     section {
-        position: relative;
-        height: auto;
-        min-height: auto;
-        padding: 80px 4% 3rem;
-        overflow: visible;
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 80px 4% 3rem !important;
+        overflow: visible !important;
     }
 
     section.active {
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
         animation: none;
         visibility: visible;
         opacity: 1;
