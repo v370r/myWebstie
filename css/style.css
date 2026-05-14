@@ -196,10 +196,25 @@ section.active {
     padding-top: 3rem;
 }
 
-/* Mobile: fixed pixel padding to clear navbar (rem shrinks on mobile) */
+/* Mobile: allow home section to grow beyond viewport height */
 @media screen and (max-width: 768px) {
     .home {
-        padding-top: 90px;
+        padding-top: 120px;
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .card-top {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    .home-img {
+        flex-shrink: 0;
+        margin-bottom: 2rem;
     }
 }
 
