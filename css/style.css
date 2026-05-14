@@ -191,6 +191,25 @@ section.active {
     padding-top: 3rem;
 }
 
+/* Ensure home section content clears fixed navbar */
+@media screen and (max-width: 992px) {
+    .home {
+        padding-top: 14rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding-top: 18rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home {
+        padding-top: 20rem;
+    }
+}
+
 .home-detail {
     width: 100%;
     max-width: 110rem;
