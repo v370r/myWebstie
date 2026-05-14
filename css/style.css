@@ -196,16 +196,10 @@ section.active {
     padding-top: 3rem;
 }
 
-/* Mobile: ensure home section clears fixed navbar even with reduced font-size */
-@media screen and (max-width: 992px) {
-    .home {
-        padding-top: 10rem;
-    }
-}
-
+/* Mobile: fixed pixel padding to clear navbar (rem shrinks on mobile) */
 @media screen and (max-width: 768px) {
     .home {
-        padding-top: 8rem;
+        padding-top: 90px;
     }
 }
 
