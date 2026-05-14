@@ -320,518 +320,246 @@
 
   <!-- resume section -->
   <section class="resume" id="resume" aria-label="Resume section">
+    <h2 class="heading">My <span>Resume</span></h2>
     <div class="resume-container">
-      <div class="resume-box">
-        <h2>Why Hire Me?</h2>
-        <p class="desc">
-          I specialize in building scalable, high-performance distributed systems with expertise in backend development,
-          cloud computing, serverless architectures, and AI/LLM systems. My experience spans from leading monolith-to-microservices
-          modernization at ADP Vantage to architecting fully serverless AWS stacks from scratch. I bring technical leadership,
-          mentoring experience, and a track record of improving deployment velocity by 60% while processing millions of events daily.
-        </p>
-        <button class="resume-btn active">Experience</button>
-        <button class="resume-btn">Education</button>
-        <button class="resume-btn">Skills</button>
-        <button class="resume-btn">AI & LLM</button>
-        <button class="resume-btn">About Me</button>
+      <!-- Timeline column -->
+      <div class="resume-column">
+        <h3 class="resume-heading">Experience</h3>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Role 1: Aragorn Racing -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" data-role="aragorn">
+              <div class="timeline-header">
+                <div>
+                  <h4>Backend Engineer & Tech Lead</h4>
+                  <p class="timeline-meta">Aragorn Racing Corp · 2025 · Remote</p>
+                </div>
+                <span class="timeline-toggle" aria-label="Expand role">▸</span>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-chip">AWS CDK</span>
+                <span class="tech-chip">Lambda</span>
+                <span class="tech-chip">Aurora PostgreSQL</span>
+                <span class="tech-chip">EventBridge</span>
+                <span class="tech-chip">SQS</span>
+                <span class="tech-chip">S3</span>
+                <span class="tech-chip">Cognito</span>
+                <span class="tech-chip">CloudWatch</span>
+              </div>
+              <div class="timeline-detail">
+                <ul>
+                  <li>Architected fully serverless AWS stack (API Gateway, Lambda, Aurora PostgreSQL Serverless v2, EventBridge, SQS, S3, VPC) using AWS CDK for infrastructure as code</li>
+                  <li>Designed domain models, PostgreSQL schemas, and secure REST APIs with AWS Cognito authentication</li>
+                  <li>Built CI/CD pipelines with structured logging via Lambda Powertools, CloudWatch dashboards, and Dead Letter Queues for fault-tolerant event processing</li>
+                  <li>Own end-to-end system design, infrastructure strategy, and API architecture for a digital horse racing analytics platform</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: Teaching Assistant -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" data-role="ta">
+              <div class="timeline-header">
+                <div>
+                  <h4>Teaching Assistant</h4>
+                  <p class="timeline-meta">CU Boulder · 2025 · Boulder, CO</p>
+                </div>
+                <span class="timeline-toggle" aria-label="Expand role">▸</span>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-chip">WCAG 2.1</span>
+                <span class="tech-chip">ARIA</span>
+                <span class="tech-chip">WAVE</span>
+                <span class="tech-chip">Inclusive Design</span>
+              </div>
+              <div class="timeline-detail">
+                <ul>
+                  <li>Supported instruction for 50+ students per semester across accessibility-focused courses</li>
+                  <li>Graded assignments and provided detailed feedback on WCAG 2.1 compliance and inclusive design</li>
+                  <li>Evaluated student projects using WAVE accessibility tools and collaborated with professors on course materials</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3: GetMyURI -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" data-role="getmyuri">
+              <div class="timeline-header">
+                <div>
+                  <h4>Founding Engineer — GetMyURI</h4>
+                  <p class="timeline-meta">app.getmyuri.com · 2025</p>
+                </div>
+                <span class="timeline-toggle" aria-label="Expand role">▸</span>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-chip">Spring Boot</span>
+                <span class="tech-chip">Redis</span>
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">GKE</span>
+                <span class="tech-chip">Helm</span>
+                <span class="tech-chip">Jenkins</span>
+              </div>
+              <div class="timeline-detail">
+                <ul>
+                  <li>Developed high-performance URL shortening platform handling 200K+ requests/sec with custom aliases, location-based access, and password protection</li>
+                  <li>Deployed on Google Kubernetes Engine with Jenkins CI/CD and Helm for orchestration, ensuring scalability and fault tolerance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 4: ADP Vantage -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" data-role="adp">
+              <div class="timeline-header">
+                <div>
+                  <h4>Software Engineer — ADP Vantage</h4>
+                  <p class="timeline-meta">ADP · 2021-2024 · Hyderabad, India</p>
+                </div>
+                <span class="timeline-toggle" aria-label="Expand role">▸</span>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-chip">Spring Boot</span>
+                <span class="tech-chip">Kafka</span>
+                <span class="tech-chip">Angular</span>
+                <span class="tech-chip">Kubernetes</span>
+                <span class="tech-chip">Jenkins</span>
+                <span class="tech-chip">Selenium BDD</span>
+              </div>
+              <div class="timeline-detail">
+                <ul>
+                  <li>Led monolith-to-microservices migration for ADP Vantage payroll platform, improving deployment velocity by ~60%</li>
+                  <li>Built Apache Kafka event-driven pipelines processing 1M+ messages/day with sub-second latency</li>
+                  <li>Delivered Angular Unified Interface improving page performance by ~45% and reducing redundant backend calls by ~35%</li>
+                  <li>Implemented Selenium BDD smoke tests, cutting manual QA effort by ~80%</li>
+                  <li>Mentored and onboarded 15+ new engineers; optimized Spring Boot services via caching and query tuning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 5: Peacock Solar -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" data-role="peacock">
+              <div class="timeline-header">
+                <div>
+                  <h4>Data Analyst Intern</h4>
+                  <p class="timeline-meta">Peacock Solar · May-Aug 2020</p>
+                </div>
+                <span class="timeline-toggle" aria-label="Expand role">▸</span>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Selenium</span>
+                <span class="tech-chip">SQL</span>
+                <span class="tech-chip">Looker Studio</span>
+              </div>
+              <div class="timeline-detail">
+                <ul>
+                  <li>Automated data collection and preprocessing using Python, Selenium, and SQL, streamlining workflows and reducing processing time</li>
+                  <li>Built interactive dashboards in Looker Studio delivering actionable insights that boosted sales conversion by 25%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="resume-box">
-        <div class="resume-detail experience active">
-          <h2 class="heading">My <span>Experience</span></h2>
-          <p class="desc">
-            With a strong foundation in software development, I have worked on scalable backend systems, frontend optimization, 
-            and DevOps solutions. My expertise spans microservices architecture, cloud infrastructure, and automation to improve 
-            system efficiency and reduce manual efforts.
-          </p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>Backend Engineer & Technical Lead (Co-op)</h3>
-              <p class="company">Aragorn Racing Corporation <span style="color: var(--main-color); font-weight: 400; font-size: 1.4rem;">Remote</span></p>
-                <p>
-                  Lead backend architecture and technical decision-making for a digital horse racing analytics platform,
-                  owning end-to-end system design, infrastructure strategy, and API architecture. Designed domain models,
-                  PostgreSQL schemas, and secure REST APIs with AWS Cognito authentication. Architected a fully serverless
-                  AWS stack (API Gateway, Lambda, Aurora PostgreSQL Serverless v2, EventBridge, SQS, S3, VPC) using AWS CDK
-                  for Infrastructure as Code. Built CI/CD pipelines, implemented structured logging with AWS Lambda Powertools,
-                  CloudWatch dashboards, and Dead Letter Queues for fault-tolerant event processing.
-                </p>
-            </div>
+      <!-- Right column: Education, Skills, AI/LLM -->
+      <div class="resume-column">
 
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>Teaching Assistant</h3>
-              <p class="company">University of Colorado Boulder <span class="gpa">Boulder, CO</span></p>
-                <p>
-                  Supported instruction for 50+ students per semester across accessibility-focused courses, grading assignments
-                  and providing detailed feedback on WCAG 2.1 compliance and inclusive design principles. Evaluated student
-                  projects using WAVE accessibility evaluation tools and collaborated with professors to enhance course materials
-                  based on evolving accessibility standards and industry best practices.
-                </p>
+        <!-- Education -->
+        <div class="resume-subsection">
+          <h3 class="resume-heading">Education</h3>
+          <div class="education-grid">
+            <div class="education-card">
+              <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
+              <h4>M.S. Computer Science</h4>
+              <p class="edu-school">University of Colorado Boulder</p>
+              <p class="edu-year">2024-2026 · GPA: 3.8/4.0</p>
+              <p class="edu-detail">GenAI Software Development, Big Data Architecture, Linux System Administration, CS Capstone (sponsor pWin.ai)</p>
             </div>
-
-            <div class="resume-item">
-              <p class="year">2025 - Present</p>
-              <h3>Founding Engineer - app.getmyuri.com</h3>
-              <p class="company">Get My Uri </p>
-                <p>
-                  I developed GetMyURI.com, a high-performance URL shortening platform using Spring Boot, Redis, and MongoDB. 
-                  The system supports custom aliases, location-based access, and password protection, handling 200K+ requests/sec. 
-                  I deployed it on GKE with Jenkins-based CI/CD and Helm for orchestration, ensuring scalability and fault tolerance.
-                </p>
-          </div>
-            <div class="resume-item">
-              <p class="year">2024 - Present</p>
-              <h3>Student Faculty Grader - Universal Design For Digital Media</h3>
-              <p class="company">University of Colorado Boulder</p>
-                <p>
-                  At the University of Colorado Boulder, I worked as a Student Faculty Grader for Universal Design for Digital Media, 
-                  where I evaluated assignments based on WCAG, ARIA, and semantic HTML standards. I provided timely feedback to help students 
-                  improve their understanding of accessibility, responsive design, and keyboard navigation, while supporting faculty and students 
-                  in building inclusive websites.
-                </p>
-          </div>
-
-            <div class="resume-item">
-              <p class="year">2021 - 2024</p>
-              <h3>Software Engineer — ADP Vantage</h3>
-              <p class="company">ADP <span style="color: var(--main-color); font-weight: 400; font-size: 1.4rem;">Hyderabad, India</span></p>
-              <p>
-                Built and optimized Spring Boot microservices and REST APIs for the ADP Vantage payroll platform,
-                applying performance tuning via caching, connection pooling, and query optimization. Led the modernization
-                of legacy monolith to microservices architecture, introducing metrics, distributed tracing, and centralized
-                logging. Developed CI/CD pipelines with Jenkins, improving deployment speed by ~60%. Delivered a new Angular
-                Unified Interface improving page performance by ~45% and reducing redundant backend calls by ~35%. Built
-                Apache Kafka event-driven pipelines processing 1M+ messages/day with sub-second latency. Implemented
-                Selenium BDD smoke tests, cutting manual QA effort by ~80%. Mentored and onboarded 15+ new engineers.
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">May 2020 -Aug 2020</p>
-              <h3>Data Analyst Intern</h3>
-              <p class="company">Peacock Solar</p>
-              <p>
-                As a Data Analyst Intern at Peacock Solar, I automated data collection and preprocessing using Python, Selenium, and SQL, 
-                streamlining workflows and reducing processing time. I built interactive dashboards in Looker Studio, delivering actionable 
-                insights that optimized marketing strategies and boosted sales conversion by 25%.
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2019 - 2021</p>
-              <h3>Tutor </h3>
-              <p class="company">HashLearn</p>
-              <p>
-                As a JEE Advanced Tutor at HashLearn, I provided personalized coaching in Mathematics and Physics, helping students 
-                strengthen their problem-solving skills. I conducted one-on-one sessions, developed custom study plans, and simplified 
-                complex concepts to improve student performance. My guidance contributed to higher success rates among students preparing for competitive exams.
-              </p>
-            </div>
-
-            <!-- <div class="resume-item">
-              <p class="year">2019 - 2020</p>
-              <h3>UI/UX Developer</h3>
-              <p class="company">Abc Inc.</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                rem nulla sunt, dolores quo sint nobis autem magnam at,
-                cupiditate id sapiente necessitatibus, reprehenderit animi
-                alias dolore obcaecati fugit expedita.
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2018 - 2019</p>
-              <h3>Junior Developer</h3>
-              <p class="company">Xyz Corp</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                rem nulla sunt, dolores quo sint nobis autem magnam at,
-                cupiditate id sapiente necessitatibus, reprehenderit animi
-                alias dolore obcaecati fugit expedita.
-              </p>
-            </div> -->
-          </div>
-        </div>
-
-        <div class="resume-detail education">
-          <h2 class="heading">My <span>Education</span></h2>
-          <p class="desc">
-            Completed an M.S. in Computer Science at the University of Colorado Boulder (GPA: 3.8/4.0),
-            specializing in GenAI software development, big data architecture, and system design. Previously, earned a B.Tech from IIT Hyderabad (GPA: 3.7/4),
-            focusing on data structures, algorithms, AI, and ML. This academic foundation has strengthened my technical expertise and problem-solving skills
-            for building scalable software solutions.
-          </p>
-
-          <div class="resume-list">
-            <div class="resume-item">
-              <p class="year">2024 - 2026</p>
-              <h3>Master in Computer Science</h3>
-              <p class="company">University of Colorado Boulder <span class="gpa">3.8/4.0</span></p>
-
-
-              <p>
-                GenAI-Software Development, Object-Oriented Analysis and Design, Big Data Architecture, Linux System Administration, CS Capstone (sponsor pWin.ai)
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2017-2021</p>
-              <h3>Bachelor in Technology</h3>
-              <p class="company">Indian Institute of Technology Hyderabad (IIT-H) <span class="gpa">3.7/4</span></p>
-              <p>
-                Data Structures and Algorithms, Data Analytics, AI and ML, Statistics, Software Engineering
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2015-2017</p>
-              <h3>MPC</h3>
-              <p class="company">Sri Chaitanya Junior College</p>
-              <p>
-                Mathematics, Physics, Chemistry
-              </p>
-            </div>
-
-            <!-- <div class="resume-item">
-              <p class="year">2017 - 2018</p>
-              <h3>Doctor of Engineering</h3>
-              <p class="company">Codehal University</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                rem nulla sunt, dolores quo sint nobis autem magnam at,
-                cupiditate id sapiente necessitatibus, reprehenderit animi
-                alias dolore obcaecati fugit expedita.
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2015 - 2017</p>
-              <h3>Master of Computer Science</h3>
-              <p class="company">Codehal University</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                rem nulla sunt, dolores quo sint nobis autem magnam at,
-                cupiditate id sapiente necessitatibus, reprehenderit animi
-                alias dolore obcaecati fugit expedita.
-              </p>
-            </div>
-
-            <div class="resume-item">
-              <p class="year">2012 - 2015</p>
-              <h3>Bachelor of Data Science</h3>
-              <p class="company">Codehal University</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                rem nulla sunt, dolores quo sint nobis autem magnam at,
-                cupiditate id sapiente necessitatibus, reprehenderit animi
-                alias dolore obcaecati fugit expedita.
-              </p>
-            </div> -->
-          </div>
-        </div>
-
-        <div class="resume-detail skills">
-          <h2 class="heading">My <span>Skills</span></h2>
-          <p class="desc">
-            With expertise in backend development, cloud computing, and automation, I specialize in building scalable, high-performance applications.
-          </p>
-
-          <div class="resume-list">
-            <div class="resume-item">
-              <i class="bx bxl-java"></i>
-              <span>Java</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-javascript"></i>
-              <span>JavaScript</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-typescript"></i>
-              <span>TypeScript</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-python"></i>
-              <span>Python</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-database"></i>
-              <span>SQL</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-arrows-spin"></i>
-              <span>CI/CD Pipelines</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-kubernetes"></i>
-              <span>Kubernetes</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-brands fa-jenkins"></i>
-              <span>Jenkins</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-aws"></i>
-              <span>AWS</span>
-            </div>
-            <div class="resume-item">
-              <i class="cib-spring"></i>
-              <span>Spring STS</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-angular"></i>
-              <span>Angular</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-vial"></i>
-              <span>Selenium BDD</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-nodejs"></i>
-              <span>Node.js</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-visual-studio"></i>
-              <span>VS Code</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-brands fa-linux"></i>
-              <span>Linux</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-brands fa-jira"></i>
-              <span>JIRA</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-git"></i>
-              <span>Git</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-docker"></i>
-              <span>Docker</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-brands fa-aws"></i>
-              <span>AWS Lambda</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-server"></i>
-              <span>Serverless</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-code-branch"></i>
-              <span>Terraform</span>
-            </div>
-            <div class="resume-item">
-              <i class="bx bxl-github"></i>
-              <span>GitHub Actions</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-brain"></i>
-              <span>LangChain</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-diagram-project"></i>
-              <span>LangGraph</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-robot"></i>
-              <span>Agentic AI</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-layer-group"></i>
-              <span>RAG Pipelines</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-database"></i>
-              <span>pgvector / FAISS</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-chart-line"></i>
-              <span>CloudWatch</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-microchip"></i>
-              <span>JMeter</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-brands fa-react"></i>
-              <span>React</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-bolt"></i>
-              <span>Next.js</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-fire"></i>
-              <span>Firebase</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-terminal"></i>
-              <span>Bash</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" />
-              <span>Claude Code</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="Codex" loading="lazy" />
-              <span>Codex</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-source-initiative.svg" alt="Open Source LLMs" loading="lazy" />
-              <span>Open Source LLMs</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/hermes" alt="Hermes" loading="lazy" />
-              <span>Hermes</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg" alt="OpenClaw" loading="lazy" />
-              <span>OpenClaw</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/qiskit" alt="Qiskit" loading="lazy" />
-              <span>Qiskit</span>
+            <div class="education-card">
+              <div class="edu-icon"><i class="bx bx-graduation-cap"></i></div>
+              <h4>B.Tech</h4>
+              <p class="edu-school">Indian Institute of Technology Hyderabad</p>
+              <p class="edu-year">2017-2021 · GPA: 3.7/4</p>
+              <p class="edu-detail">Data Structures and Algorithms, Data Analytics, AI and ML, Statistics, Software Engineering</p>
             </div>
           </div>
         </div>
 
-        <div class="resume-detail ai-llm">
-          <h2 class="heading">AI & <span>LLM Systems</span></h2>
-          <p class="desc">
-            Experienced in building production-grade AI systems with RAG pipelines, agentic architectures, and LLM fine-tuning.
-            Architected modular Agentic RAG systems for the pWin.ai capstone and integrated AI capabilities into enterprise applications.
-          </p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/claude" alt="Claude Code" loading="lazy" />
-              <span>Claude Code</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="Codex" loading="lazy" />
-              <span>Codex</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-source-initiative.svg" alt="Open Source LLMs" loading="lazy" />
-              <span>Open Source LLMs</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/hermes" alt="Hermes" loading="lazy" />
-              <span>Hermes</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg" alt="OpenClaw" loading="lazy" />
-              <span>OpenClaw</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/langchain" alt="LangChain" loading="lazy" />
-              <span>LangChain</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-layer-group"></i>
-              <span>RAG Pipelines</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/langgraph" alt="LangGraph" loading="lazy" />
-              <span>LangGraph</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-robot"></i>
-              <span>Agentic AI</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-microscope"></i>
-              <span>LLM Fine-tuning</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span>Prompt Engineering</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postgresql.svg" alt="pgvector" loading="lazy" />
-              <span>pgvector</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-database"></i>
-              <span>FAISS</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hugging-face.svg" alt="Hugging Face" loading="lazy" />
-              <span>Hugging Face</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span>Evals & Guardrails</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" />
-              <span>Streamlit</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="OpenAI APIs" loading="lazy" />
-              <span>OpenAI APIs</span>
-            </div>
-            <div class="resume-item">
-              <img src="https://cdn.simpleicons.org/anthropic" alt="Anthropic" loading="lazy" />
-              <span>Anthropic</span>
-            </div>
-            <div class="resume-item">
-              <i class="fa-solid fa-sitemap"></i>
-              <span>Transfer Learning</span>
-            </div>
+        <!-- Skills -->
+        <div class="resume-subsection">
+          <h3 class="resume-heading">Skills</h3>
+          <div class="skills-grid" id="skills-grid">
+            <div class="skill-item"><i class="bx bxl-java"></i><span>Java</span></div>
+            <div class="skill-item"><i class="cib-spring"></i><span>Spring Boot</span></div>
+            <div class="skill-item"><i class="bx bxl-python"></i><span>Python</span></div>
+            <div class="skill-item"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
+            <div class="skill-item"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
+            <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+            <div class="skill-item"><i class="bx bxl-nodejs"></i><span>Node.js</span></div>
+            <div class="skill-item"><i class="bx bxl-angular"></i><span>Angular</span></div>
+            <div class="skill-item"><i class="fa-brands fa-react"></i><span>React</span></div>
+            <div class="skill-item"><i class="fa-solid fa-bolt"></i><span>Next.js</span></div>
+            <div class="skill-item"><i class="fa-solid fa-arrows-spin"></i><span>CI/CD</span></div>
+            <div class="skill-item"><i class="bx bxl-docker"></i><span>Docker</span></div>
+            <div class="skill-item"><i class="bx bxl-kubernetes"></i><span>Kubernetes</span></div>
+            <div class="skill-item"><i class="fa-brands fa-jenkins"></i><span>Jenkins</span></div>
+            <div class="skill-item"><i class="bx bxl-git"></i><span>Git</span></div>
+            <div class="skill-item"><i class="bx bxl-github"></i><span>GitHub Actions</span></div>
+            <div class="skill-item"><i class="bx bxl-aws"></i><span>AWS</span></div>
+            <div class="skill-item"><i class="fa-brands fa-aws"></i><span>Lambda</span></div>
+            <div class="skill-item"><i class="fa-solid fa-server"></i><span>Serverless</span></div>
+            <div class="skill-item"><i class="fa-solid fa-code-branch"></i><span>Terraform</span></div>
+            <div class="skill-item"><i class="fa-solid fa-vial"></i><span>Selenium BDD</span></div>
+            <div class="skill-item"><i class="fa-solid fa-chart-line"></i><span>CloudWatch</span></div>
+            <div class="skill-item"><i class="fa-solid fa-microchip"></i><span>JMeter</span></div>
+            <div class="skill-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+            <div class="skill-item"><i class="fa-brands fa-jira"></i><span>JIRA</span></div>
+            <div class="skill-item"><i class="fa-solid fa-terminal"></i><span>Bash</span></div>
+            <div class="skill-item"><i class="bx bxl-visual-studio"></i><span>VS Code</span></div>
+            <div class="skill-item"><i class="fa-solid fa-fire"></i><span>Firebase</span></div>
           </div>
         </div>
 
-        <div class="resume-detail about">
-          <h2 class="heading">About <span>Me</span></h2>
-          <p class="desc">
-            Experienced Software Engineer with 4+ years building scalable distributed microservices and backend systems using Java, Spring Boot, Kafka, and AWS. Currently pursuing M.S. in Computer Science at CU Boulder (GPA: 3.8/4.0). Open to full-time opportunities in the Bay Area and beyond.
-          </p>
-          <div class="resume-list">
-            <div class="resume-item">
-              <p>Name <span>Vijay Kumar Poloju</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Gender <span>Male</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Age <span>24 Years Old</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Status <span>Single</span></p>
-            </div>
-            <div class="resume-item">
-              <p>City <span>Fremont, CA</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Nationality <span>Indian</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Experience <span>4+ Years</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Education <span>M.S. Computer Science, CU Boulder</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Full Time <span>Available</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Freelance <span>Available</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Phone <span>(+1) 303 901 0415</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Email <span>vijaykumarpolojuofficial@gmail.com</span></p>
-            </div>
-            <div class="resume-item">
-              <p>Languages <span>English, Telugu</span></p>
-            </div>
+        <!-- AI & LLM -->
+        <div class="resume-subsection">
+          <h3 class="resume-heading">AI & LLM Systems</h3>
+          <div class="skills-grid ai-llm-grid" id="ai-llm-grid">
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" /><span>Claude Code</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg" alt="Codex" loading="lazy" /><span>Codex</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-source-initiative.svg" alt="Open Source" loading="lazy" /><span>Open Source LLMs</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain" alt="LangChain" loading="lazy" /><span>LangChain</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/langgraph" alt="LangGraph" loading="lazy" /><span>LangGraph</span></div>
+            <div class="skill-item"><i class="fa-solid fa-layer-group"></i><span>RAG Pipelines</span></div>
+            <div class="skill-item"><i class="fa-solid fa-robot"></i><span>Agentic AI</span></div>
+            <div class="skill-item"><i class="fa-solid fa-microscope"></i><span>LLM Fine-tuning</span></div>
+            <div class="skill-item"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Prompt Engineering</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postgresql.svg" alt="pgvector" loading="lazy" /><span>pgvector</span></div>
+            <div class="skill-item"><i class="fa-solid fa-database"></i><span>FAISS</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hugging-face.svg" alt="Hugging Face" loading="lazy" /><span>Hugging Face</span></div>
+            <div class="skill-item"><i class="fa-solid fa-shield-halved"></i><span>Evals & Guardrails</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" /><span>Streamlit</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic" alt="Anthropic" loading="lazy" /><span>Anthropic</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/hermes" alt="Hermes" loading="lazy" /><span>Hermes</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openclaw-dark.svg" alt="OpenClaw" loading="lazy" /><span>OpenClaw</span></div>
+            <div class="skill-item"><img src="https://cdn.simpleicons.org/qiskit" alt="Qiskit" loading="lazy" /><span>Qiskit</span></div>
+            <div class="skill-item"><i class="fa-solid fa-sitemap"></i><span>Transfer Learning</span></div>
           </div>
         </div>
+
       </div>
     </div>
   </section>

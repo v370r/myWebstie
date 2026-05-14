@@ -67,21 +67,20 @@ if (servicesBtn) {
   });
 }
 
-const resumeBtns = document.querySelectorAll(".resume-btn");
+// Timeline accordion
+document.querySelectorAll('.timeline-content').forEach((content) => {
+  content.addEventListener('click', () => {
+    const isExpanded = content.classList.contains('expanded');
 
-resumeBtns.forEach((btn, idx) => {
-  btn.addEventListener("click", () => {
-    const resumeDetails = document.querySelectorAll(".resume-detail");
-
-    resumeBtns.forEach((btn) => {
-      btn.classList.remove("active");
+    // Close all
+    document.querySelectorAll('.timeline-content').forEach((c) => {
+      c.classList.remove('expanded');
     });
-    btn.classList.add("active");
 
-    resumeDetails.forEach((detail) => {
-      detail.classList.remove("active");
-    });
-    resumeDetails[idx].classList.add("active");
+    // Toggle clicked
+    if (!isExpanded) {
+      content.classList.add('expanded');
+    }
   });
 });
 
