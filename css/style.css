@@ -199,7 +199,7 @@ section.active {
 /* Mobile: allow home section to grow beyond viewport height */
 @media screen and (max-width: 768px) {
     .home {
-        padding-top: 120px;
+        padding-top: 80px;
         min-height: 100vh;
         height: auto;
         position: relative;
@@ -209,12 +209,12 @@ section.active {
     .card-top {
         flex-direction: column-reverse;
         align-items: center;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
     }
 
     .home-img {
         flex-shrink: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -352,14 +352,16 @@ section.active {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2.5rem;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
     border: .2rem solid rgba(255, 255, 255, 0.2);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--white-color);
+    color: var(--white-color) !important;
     font-weight: 500;
     transition: .4s;
     cursor: pointer;
+    -webkit-appearance: none;
+    text-decoration: none;
 }
 
 .btn-secondary:hover {
