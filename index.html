@@ -802,67 +802,125 @@
 
   <!-- contact section -->
   <section class="contact" id="contact" aria-label="Contact section">
-    <div class="contact-container">
-      <div class="contact-box">
-        <h2>Let's Work Together</h2>
-        <p class="desc">
-          I'm a Software Engineer with 4+ years building scalable distributed systems, serverless architectures, and AI-powered applications.
-          Currently based in the Bay Area and actively seeking full-time opportunities.
-          Whether you have a question, a job opportunity, or just want to connect - feel free to reach out!
-        </p>
-        <div class="contact-detail">
-          <i class="bx bxs-phone"></i>
-          <div class="detail">
-            <p>Phone</p>
-            <p><a href="tel:+13039010415" style="color: var(--white-color); text-decoration: none;">(+1) 303 901 0415</a></p>
+    <div class="contact-wrapper">
+
+      <!-- Left panel: glass info -->
+      <div class="contact-left">
+        <div class="contact-greeting">
+          <h2 class="greeting-text">Let's build<br>something <span class="accent-text">great</span>.<span class="greeting-cursor"></span></h2>
+          <p class="greeting-sub">Full Stack Engineer · Bay Area, CA<br>Currently open to new opportunities</p>
+        </div>
+
+        <div class="contact-info-rows">
+          <div class="info-row">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Email</span>
+              <a href="mailto:vijaykumarpolojuofficial@gmail.com" class="info-value">vijaykumarpolojuofficial@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Phone</span>
+              <a href="tel:+13039010415" class="info-value">+1 (303) 901-0415</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Location</span>
+              <span class="info-value">Fremont, CA · Willing to relocate</span>
+            </div>
           </div>
         </div>
 
-      <div class="contact-detail">
-          <i class="bx bxs-envelope"></i>
-          <div class="detail">
-            <p>Email</p>
-            <p><a href="mailto:vijaykumarpolojuofficial@gmail.com" style="color: var(--white-color); text-decoration: none;">vijaykumarpolojuofficial@gmail.com</a></p>
-          </div>
-        </div>
-
-        <div class="contact-detail">
-          <i class="bx bxs-map"></i>
-          <div class="detail">
-            <p>Address</p>
-            <p>Fremont, CA</p>
-          </div>
+        <div class="contact-socials">
+          <a href="https://github.com/v370r" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-1.67.36-2-0.8-2-0.8-.28-.7-.68-.9-.68-.9-.56-.38.04-.37.04-.37.62.04.94.63.94.63.55.94 1.44.67 1.79.51.06-.4.22-.67.4-.83-1.4-.16-2.87-.7-2.87-3.1 0-.69.24-1.25.64-1.69-.06-.16-.28-.8.06-1.67 0 0 .52-.17 1.7-.63a5.92 5.92 0 013.14 0c1.18.47 1.7.63 1.7.63.34.87.12 1.51.06 1.67.4.44.64 1 .64 1.69 0 2.41-1.47 2.94-2.88 3.1.22.2.43.58.43 1.17l-.01 1.73c0 .31.22.69.83.57A12 12 0 0012 .3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mrvijay-poloju/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="https://wa.link/kmpecm" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.69c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2-.22-.52-.44-.45-.61-.45l-.52-.01c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.92 2.94 4.66 4.12 2.74 1.18 2.74.79 3.24.74.5-.05 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.12-.25-.2-.52-.34zM12.05 21.5a9.45 9.45 0 110-18.9 9.45 9.45 0 010 18.9z"/></svg>
+          </a>
+          <a href="https://leetcode.com/u/vetor/" target="_blank" rel="noopener" class="social-link" aria-label="LeetCode">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.62 16.64l-3.87 2.23V14.4L13.62 12.17l3.87 2.23-3.87 2.24zm0-11.28L5.88 9.8l3.87 2.23 3.87-2.23V5.36zm4.62 3.6l-3.87-2.23v4.47l3.87 2.23V8.96zM12 2L4.66 6.24l3.87 2.23L12 5.28l3.47 3.19 3.87-2.23L12 2z"/></svg>
+          </a>
         </div>
       </div>
-      <div class="contact-box">
-        <form action="https://formsubmit.co/6882001a0fd28974dac137243897f3be" method="POST">
-          <h2 class="heading"> Contact <span>Me!</span></h2>
-          <div class="field-box">
-            <input type="text" name="name" placeholder="Full Name" required />
-            <input type="email" name="email" placeholder="Email Address" required />
-            <input type="text" name="phone" placeholder="Phone Number" />
-            <input type="text" name="subject" placeholder="Email Subject" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-        
-            <!-- Honeypot field to prevent spam -->
+
+      <!-- Right panel: terminal contact form -->
+      <div class="contact-right">
+        <div class="terminal-chrome">
+          <div class="terminal-dots">
+            <span class="t-dot t-dot-red"></span>
+            <span class="t-dot t-dot-yellow"></span>
+            <span class="t-dot t-dot-green"></span>
+          </div>
+          <span class="terminal-path">~/contact — message --send</span>
+        </div>
+
+        <form id="contact-terminal-form" action="https://formsubmit.co/6882001a0fd28974dac137243897f3be" method="POST">
+          <div class="terminal-body">
+            <div class="t-prompt">$ vim message.txt</div>
+            <div class="t-comment">// fill in the details below and i'll get back to you</div>
+            <br>
+
+            <div class="t-field">
+              <label for="ct-name">name:</label>
+              <input type="text" id="ct-name" name="name" class="t-input" placeholder="Jane Smith" required />
+            </div>
+
+            <div class="t-field">
+              <label for="ct-email">email:</label>
+              <input type="email" id="ct-email" name="email" class="t-input" placeholder="jane@company.com" required />
+            </div>
+
+            <div class="t-field">
+              <label for="ct-subject">subject:</label>
+              <input type="text" id="ct-subject" name="subject" class="t-input" placeholder="Job opportunity at Company" required />
+            </div>
+
+            <div class="t-field t-field-message">
+              <label for="ct-message">message:</label>
+              <textarea id="ct-message" name="message" class="t-textarea" placeholder="Hey Vijay, I'd love to chat about..." required></textarea>
+            </div>
+
+            <!-- Honeypot -->
             <input type="text" name="_honey" style="display:none">
-        
-            <!-- Optional: disable CAPTCHA -->
             <input type="hidden" name="_captcha" value="false" />
-        
-            <!-- Optional: disable CAPTCHA -->
-            <input type="hidden" name="_captcha" value="false" />
+
+            <button type="submit" class="t-submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              ./send_message
+            </button>
           </div>
-          <button type="submit" class="btn">Send Message</button>
-          <p class="form-status" style="margin-top: 1.5rem; font-size: 1.4rem; display: none;"></p>
         </form>
-        
+
+        <!-- Interactive terminal line (easter egg) -->
+        <div class="terminal-interactive">
+          <div class="t-output-area" id="t-output"></div>
+          <div class="t-cmd-row">
+            <span class="t-cmd-prompt">$ </span>
+            <input type="text" id="t-cmd-input" class="t-cmd-input" placeholder="try 'help'" spellcheck="false" autocomplete="off" />
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- custom js -->
   <script src="js/script.js"></script>
+  <script src="js/contact-terminal.js"></script>
 </body>
 
 </html>
