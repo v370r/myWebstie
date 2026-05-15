@@ -96,6 +96,7 @@ let index = 0;
 const activePortfolio = () => {
   const imgSlide = document.querySelector(".portfolio-carousel .img-slide");
   const portfolioDetails = document.querySelectorAll('.portfolio-detail');
+  if (!imgSlide || !portfolioDetails.length) return;
 
   imgSlide.style.transform = `translateX(calc(${index * -100}% - ${
     index * 2
@@ -109,30 +110,31 @@ const activePortfolio = () => {
 
 };
 
-arrowRight.addEventListener('click', () => {
-  if (index < 2) {
-    index++;
-    arrowLeft.classList.remove("disabled");
-  } else {
-    index = 3;
-    arrowRight.classList.add("disabled");
-  }
+if (arrowRight) {
+  arrowRight.addEventListener('click', () => {
+    if (index < 2) {
+      index++;
+      arrowLeft.classList.remove("disabled");
+    } else {
+      index = 3;
+      arrowRight.classList.add("disabled");
+    }
+    activePortfolio();
+  });
+}
 
-  activePortfolio();
-});
-
-
-arrowLeft.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    arrowRight.classList.remove("disabled");
-  } else {
-    index = 0;
-    arrowLeft.classList.add("disabled");
-  }
-
-  activePortfolio();
-});
+if (arrowLeft) {
+  arrowLeft.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      arrowRight.classList.remove("disabled");
+    } else {
+      index = 0;
+      arrowLeft.classList.add("disabled");
+    }
+    activePortfolio();
+  });
+}
 
 // Contact form submission via fetch (no redirect)
 const contactForm = document.querySelector('form[action*="formsubmit.co"]');
@@ -468,6 +470,245 @@ if (modalOverlay) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
       closeModal();
+    }
+  });
+}
+
+/* ===== Project Portfolio Modal ===== */
+const projectData = [
+  {
+    number: '#01',
+    title: 'GetMyURI',
+    tagline: 'A high-performance URL shortening platform handling 200K+ requests per second, deployed on Google Kubernetes Engine with enterprise-grade features like custom aliases, password protection, and location-based access control.',
+    description: [
+      'Built a production-grade URL shortening service from scratch, handling 200K+ requests/sec with sub-10ms response times using Redis caching and MongoDB for persistent storage',
+      'Designed a multi-tenant architecture with custom alias generation, link expiration, password-protected links, and geo-based access restrictions',
+      'Deployed on Google Kubernetes Engine (GKE) with Helm charts for orchestration, ensuring zero-downtime deployments and automatic scaling',
+      'Implemented Jenkins CI/CD pipelines with automated testing, container builds, and rolling updates across Kubernetes clusters',
+      'Integrated real-time analytics dashboard tracking link clicks, geographic distribution, and referral sources',
+      'Built with a micro-first approach — each service independently scalable, with Redis handling hot-path caching and MongoDB managing persistent link metadata'
+    ],
+    metrics: [
+      { value: '200K+', label: 'Requests/Sec' },
+      { value: '<10ms', label: 'Avg Response Time' },
+      { value: '99.9%', label: 'Uptime SLA' },
+      { value: 'GKE', label: 'Cloud Platform' }
+    ],
+    tech: ['Spring Boot', 'Java', 'Redis', 'MongoDB', 'Google Kubernetes Engine', 'Helm', 'Jenkins', 'Docker', 'REST APIs', 'Microservices', 'CI/CD'],
+    architecture: {
+      type: 'arch',
+      rows: [
+        [{ label: 'Users', cls: 'green' }, { label: 'Gateway', cls: 'blue' }, { label: 'Auth', cls: 'green' }],
+        [{ label: 'Link Mgmt', cls: 'orange' }, { label: 'Redis', cls: 'blue' }, { label: 'Counter', cls: 'purple' }],
+        [{ label: 'MongoDB', cls: 'green' }, { label: 'PostgreSQL', cls: 'orange' }, { label: 'K8s', cls: 'blue' }]
+      ]
+    },
+    liveUrl: 'http://app.getmyuri.com',
+    liveLabel: 'Live Site',
+    codeUrl: 'https://github.com/v370r/getmyuri-config',
+    codeLabel: 'GitHub Repo'
+  },
+  {
+    number: '#02',
+    title: 'Qiskit-Linter',
+    tagline: 'A VS Code extension that provides real-time linting and code analysis for quantum computing programs written with Qiskit, helping developers catch errors before running on expensive quantum hardware.',
+    description: [
+      'Developed a VS Code extension providing real-time syntax checking, best-practice validation, and quantum circuit optimization suggestions for Qiskit programs',
+      'Built a custom AST parser that analyzes quantum circuits for common anti-patterns, unnecessary gate operations, and suboptimal qubit allocations',
+      'Integrated with Azure Quantum backend to validate circuit compatibility before submission to real quantum hardware',
+      'Grew to 2,300+ developers installed, serving the quantum computing community with immediate feedback on circuit correctness',
+      'Implemented language server protocol (LSP) integration for cross-editor compatibility beyond VS Code',
+      'Designed a rule engine with 20+ quantum-specific linting rules covering circuit depth, gate fidelity, and qubit reuse patterns'
+    ],
+    metrics: [
+      { value: '2,300+', label: 'Developer Installs' },
+      { value: '20+', label: 'Linting Rules' },
+      { value: 'VS Code', label: 'Platform' },
+      { value: 'Azure', label: 'Quantum Backend' }
+    ],
+    tech: ['Node.js', 'TypeScript', 'Python', 'Qiskit', 'AST Parsing', 'Language Server Protocol', 'VS Code Extension API', 'Azure Quantum'],
+    architecture: {
+      type: 'vscode'
+    },
+    liveUrl: 'https://marketplace.visualstudio.com/items?itemName=qiskit-support-extensions.qiskit-linter',
+    liveLabel: 'VS Code Marketplace',
+    codeUrl: 'https://github.com/v370r/qiskit-lsp',
+    codeLabel: 'GitHub Repo'
+  },
+  {
+    number: '#03',
+    title: 'Pwin.ai — CS Capstone',
+    tagline: 'An agentic RAG (Retrieval-Augmented Generation) pipeline built with LangChain and LangGraph, featuring pgvector for semantic search, FAISS for fast similarity matching, and intelligent document processing for complex technical documents.',
+    description: [
+      'Built a production-grade RAG pipeline that ingests technical documents, chunks them intelligently, and creates vector embeddings stored in pgvector for fast semantic retrieval',
+      'Designed an agentic workflow using LangGraph that chains document retrieval, context synthesis, and LLM generation into a coherent answer pipeline',
+      'Implemented hybrid search combining dense vector similarity (pgvector + FAISS) with sparse keyword matching for higher retrieval accuracy',
+      'Built evaluation dashboards measuring answer quality, hallucination rate, and retrieval precision across different query types',
+      'Processed 1,000+ technical documents with custom chunking strategies that preserve contextual boundaries and cross-references',
+      'Integrated guardrails and safety checks to prevent hallucination and ensure generated answers are grounded in retrieved context'
+    ],
+    metrics: [
+      { value: '1,000+', label: 'Documents Processed' },
+      { value: 'Hybrid', label: 'Search Strategy' },
+      { value: 'LangGraph', label: 'Agent Framework' },
+      { value: 'pgvector', label: 'Vector Store' }
+    ],
+    tech: ['LangChain', 'LangGraph', 'Python', 'pgvector', 'FAISS', 'PostgreSQL', 'OpenAI APIs', 'Anthropic', 'Streamlit', 'RAG', 'Agentic AI', 'Vector Search'],
+    architecture: {
+      type: 'rag'
+    },
+    liveUrl: 'https://pwinbook.com',
+    liveLabel: 'Live Demo',
+    codeUrl: 'https://github.com/v370r',
+    codeLabel: 'GitHub Repo'
+  }
+];
+
+const projectModalOverlay = document.getElementById('projectModal');
+const projectModalBody = document.getElementById('modal-project-body');
+const projectModalClose = document.getElementById('project-modal-close');
+
+const buildProjectModalContent = (project) => {
+  let archHTML = '';
+  if (project.architecture.type === 'arch') {
+    archHTML = `<div class="modal-arch-diagram"><div class="arch-preview">`;
+    project.architecture.rows.forEach(row => {
+      archHTML += `<div class="arch-row">`;
+      row.forEach(box => {
+        archHTML += `<div class="arch-box ${box.cls}">${box.label}</div>`;
+      });
+      archHTML += `</div>`;
+    });
+    archHTML += `</div></div>`;
+  } else if (project.architecture.type === 'vscode') {
+    archHTML = `<div class="modal-arch-diagram">
+      <div class="vscode-preview">
+        <div class="vscode-titlebar">
+          <div class="vscode-dot r"></div><div class="vscode-dot y"></div><div class="vscode-dot g"></div>
+          <div class="vscode-title">qiskit_linter — main.py</div>
+        </div>
+        <div class="vscode-body">
+          <span class="vscode-kw">import</span> qiskit<br>
+          <span class="vscode-comment"># ✓ no issues</span><br>
+          <span class="vscode-kw">from</span> qiskit <span class="vscode-kw">import</span> QuantumCircuit<br>
+          <span class="vscode-str">"Linting: 3 rules applied"</span><br>
+          <span class="vscode-comment">2300+ devs installed</span>
+        </div>
+      </div>
+    </div>`;
+  } else if (project.architecture.type === 'rag') {
+    archHTML = `<div class="modal-arch-diagram">
+      <div class="rag-pipeline">
+        <div class="rag-step g">Docs</div><div class="rag-arrow">→</div>
+        <div class="rag-step b">Chunk</div><div class="rag-arrow">→</div>
+        <div class="rag-step o">pgvector</div><div class="rag-arrow">→</div>
+        <div class="rag-step g">RAG</div><div class="rag-arrow">→</div>
+        <div class="rag-step p">Agent</div>
+      </div>
+    </div>`;
+  }
+
+  return `
+    <div class="modal-project-header">
+      <div class="modal-project-number">${project.number}</div>
+      <h2 class="modal-project-title" id="modal-project-title">${project.title}</h2>
+      <p class="modal-project-tagline">${project.tagline}</p>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Key Metrics</div>
+      <div class="modal-metrics-row">
+        ${project.metrics.map(m => `
+          <div class="modal-metric-card">
+            <span class="modal-metric-value">${m.value}</span>
+            <span class="modal-metric-label">${m.label}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Architecture</div>
+      ${archHTML}
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Project Details</div>
+      <ul class="modal-description-list">
+        ${project.description.map(d => `<li>${d}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Tech Stack</div>
+      <div class="modal-tech-grid">
+        ${project.tech.map(t => `<span class="tech-chip">${t}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Links</div>
+      <div class="modal-links">
+        <a href="${project.liveUrl}" target="_blank" rel="noopener" class="modal-link-btn primary">
+          <svg viewBox="0 0 24 24"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7 0v8h-2V6.41l-8.3 8.3-1.4-1.42L17.58 5H13V3h8z"/></svg>
+          ${project.liveLabel}
+        </a>
+        <a href="${project.codeUrl}" target="_blank" rel="noopener" class="modal-link-btn secondary">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          ${project.codeLabel}
+        </a>
+      </div>
+    </div>
+  `;
+};
+
+const openProjectModal = (index) => {
+  const project = projectData[index];
+  if (!project) return;
+
+  projectModalBody.innerHTML = buildProjectModalContent(project);
+  projectModalOverlay.classList.add('active');
+  projectModalOverlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeProjectModal = () => {
+  projectModalOverlay.classList.remove('active');
+  projectModalOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+// Card click handlers
+document.querySelectorAll('.project-card[role="button"]').forEach(card => {
+  card.addEventListener('click', (e) => {
+    // Don't open modal if clicking action buttons
+    if (e.target.closest('.card-action')) return;
+    openProjectModal(parseInt(card.dataset.project));
+  });
+
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openProjectModal(parseInt(card.dataset.project));
+    }
+  });
+});
+
+// Modal close handlers
+if (projectModalClose) {
+  projectModalClose.addEventListener('click', closeProjectModal);
+}
+
+if (projectModalOverlay) {
+  projectModalOverlay.addEventListener('click', (e) => {
+    if (e.target === projectModalOverlay) {
+      closeProjectModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModalOverlay.classList.contains('active')) {
+      closeProjectModal();
     }
   });
 }

@@ -621,184 +621,140 @@
 
   <!-- portfolio section -->
   <section class="portfolio" id="portfolio" aria-label="Portfolio section">
-    <h2 class="heading">Latest <span>Project</span></h2>
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <div class="portfolio-detail active">
-          <p class="numb">01</p>
+    <h2 class="heading">Featured <span>Projects</span></h2>
+    <div class="portfolio-grid">
+
+      <div class="project-card" data-project="0" role="button" tabindex="0" aria-label="View GetMyURI project details">
+        <div class="project-card-preview">
+          <div class="arch-preview">
+            <div class="arch-row">
+              <div class="arch-box green">Users</div>
+              <div class="arch-box blue">Gateway</div>
+              <div class="arch-box green">Auth</div>
+            </div>
+            <div class="arch-row">
+              <div class="arch-box orange">Link Mgmt</div>
+              <div class="arch-box blue">Redis</div>
+              <div class="arch-box purple">Counter</div>
+            </div>
+            <div class="arch-row">
+              <div class="arch-box green">MongoDB</div>
+              <div class="arch-box orange">PostgreSQL</div>
+              <div class="arch-box blue">K8s</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div class="project-number">#01</div>
           <h3>GetMyURI</h3>
-          <div class="project-description">
-            <ul>
-              <li>Engineered a robust backend system featuring four core Spring Boot microservices:
-                <ul>
-                  <li>User-Auth Microservice</li>
-                  <li>API Gateway</li>
-                  <li>Link Management Backend</li>
-                  <li>Global Redis Counter Service</li>
-                </ul>
-              </li>
-              <li>Utilized MongoDB’s NoSQL tree-like structure for flexible custom alias hierarchies.</li>
-              <li>Implemented scheduled jobs for syncing view counts from Redis to PostgreSQL.</li>
-              <li>Developed scalable services for custom short link resolution, location-based access (using Haversine formula), link expiration, and password protection.</li>
-              <li>Designed a fault-tolerant architecture with multiple Kubernetes pods, handling over 200,000 users/second.</li>
-              <li>Deployed on Google Kubernetes Engine (GKE) with automated CI/CD pipelines using Jenkins and Helm.</li>
-            </ul>
+          <div class="one-liner">Short-link platform handling 200K users/sec on Google Kubernetes Engine</div>
+          <div class="tech-chips">
+            <span class="tech-chip">Spring Boot</span>
+            <span class="tech-chip">K8s</span>
+            <span class="tech-chip">Redis</span>
+            <span class="tech-chip">MongoDB</span>
           </div>
-          <div class="tech">
-            <p>Spring Boot, Microservices, MongoDB, Redis, PostgreSQL, Kubernetes, Docker, Jenkins, Helm, CI/CD</p>
-          </div>
-
-          <div class="live-github">
-            <a href="http://app.getmyuri.com" target="_blank"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="https://github.com/v370r/getmyuri-config" target="_blank"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+          <div class="card-actions">
+            <a href="http://app.getmyuri.com" target="_blank" rel="noopener" class="card-action live" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7 0v8h-2V6.41l-8.3 8.3-1.4-1.42L17.58 5H13V3h8z"/></svg>
+              Live
+            </a>
+            <a href="https://github.com/v370r/getmyuri-config" target="_blank" rel="noopener" class="card-action github" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Code
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="portfolio-detail">
-          <p class="numb">02</p>
+      <div class="project-card" data-project="1" role="button" tabindex="0" aria-label="View Qiskit-Linter project details">
+        <div class="project-card-preview">
+          <div class="vscode-preview">
+            <div class="vscode-titlebar">
+              <div class="vscode-dot r"></div>
+              <div class="vscode-dot y"></div>
+              <div class="vscode-dot g"></div>
+              <div class="vscode-title">qiskit_linter — main.py</div>
+            </div>
+            <div class="vscode-body">
+              <span class="vscode-kw">import</span> qiskit<br>
+              <span class="vscode-comment"># ✓ no issues</span><br>
+              <span class="vscode-kw">from</span> qiskit <span class="vscode-kw">import</span> QuantumCircuit<br>
+              <span class="vscode-str">"Linting: 3 rules applied"</span><br>
+              <span class="vscode-comment">2300+ devs installed</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div class="project-number">#02</div>
           <h3>Qiskit-Linter</h3>
-          <div class="project-description">
-            <ul>
-              <li>Developed the Qiskit-Linter VS Code extension from scratch, offering syntax checking and formatting for the Qiskit quantum computing language.</li>
-              <li>Leveraged Node.js and Abstract Syntax Trees (AST) to build robust linting capabilities.</li>
-              <li>Successfully deployed on Azure, achieving a user base of over 2300+ developers.</li>
-            </ul>
+          <div class="one-liner">VS Code extension for quantum computing linting. 2,300+ developers installed</div>
+          <div class="tech-chips">
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">AST</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Azure</span>
           </div>
-          <div class="tech">
-            <p>JavaScript, Python, Node.js, Abstract Syntax Trees (AST), Shell, Azure</p>
-          </div>
-
-          <div class="live-github">
-            <a href="https://marketplace.visualstudio.com/items?itemName=qiskit-support-extensions.qiskit-linter" target="_blank"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="https://github.com/v370r/qiskit-lsp" target="_blank"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+          <div class="card-actions">
+            <a href="https://marketplace.visualstudio.com/items?itemName=qiskit-support-extensions.qiskit-linter" target="_blank" rel="noopener" class="card-action live" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7 0v8h-2V6.41l-8.3 8.3-1.4-1.42L17.58 5H13V3h8z"/></svg>
+              Marketplace
+            </a>
+            <a href="https://github.com/v370r/qiskit-lsp" target="_blank" rel="noopener" class="card-action github" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Code
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="portfolio-detail">
-          <p class="numb">03</p>
+      <div class="project-card" data-project="2" role="button" tabindex="0" aria-label="View Pwin.ai project details">
+        <div class="project-card-preview">
+          <div class="rag-pipeline">
+            <div class="rag-step g">Docs</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-step b">Chunk</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-step o">pgvector</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-step g">RAG</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-step p">Agent</div>
+          </div>
+        </div>
+        <div class="project-card-info">
+          <div class="project-number">#03</div>
           <h3>Pwin.ai — CS Capstone</h3>
-          <div class="project-description">
-            <ul>
-              <li>Architected a modular Agentic RAG pipeline with document loaders, chunking and embedding strategies, vector store integration, retrieval, and synthesis layers with response caching and safety guardrails.</li>
-              <li>Built multi-tool LangChain/LangGraph agents using planner/executor patterns for task routing, web search, and tool use; added tracing and evaluation frameworks for reliability monitoring.</li>
-              <li>Shipped a Streamlit application showcasing retrieval pipelines, agent hand-offs, and evaluation dashboards; integrated pgvector and FAISS for hybrid semantic search.</li>
-            </ul>
+          <div class="one-liner">Agentic RAG pipeline with LangGraph, pgvector, and hybrid semantic search</div>
+          <div class="tech-chips">
+            <span class="tech-chip">LangChain</span>
+            <span class="tech-chip">pgvector</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">FAISS</span>
           </div>
-          <div class="tech">
-            <p>LangChain, LangGraph, Python, pgvector, FAISS, Streamlit, RAG, Agentic AI, LLM Fine-tuning</p>
-          </div>
-
-          <div class="live-github">
-            <a href="https://pwinbook.com" target="_blank"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="https://github.com/v370r" target="_blank"><i class="bx bxl-github"></i><span>Github Repository</span></a>
-          </div>
-        </div>
-
-        <!-- <div class="portfolio-detail">
-          <p class="numb">03</p>
-          <h3>eCommerce Spring Boot Application</h3>
-          <p>
-            Developed and optimized key services with a Spring Boot application, including Products, Comments, Carts, and Order management systems, utilizing well-structured DTOs, repositories, and mappers and ensured efficient data preprocessing and scalability. Integrated robust security features such as authentication, authorization, user profile and user registration using a spring security along with email confirmation and enhanced user experience and application flow.
-          </p>
-          <div class="tech">
-            <p>Java, Spring Boot, Docker, PostgreSQL</p>
-          </div>
-
-          <div class="live-github">
-            <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+          <div class="card-actions">
+            <a href="https://pwinbook.com" target="_blank" rel="noopener" class="card-action live" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7 0v8h-2V6.41l-8.3 8.3-1.4-1.42L17.58 5H13V3h8z"/></svg>
+              Live
+            </a>
+            <a href="https://github.com/v370r" target="_blank" rel="noopener" class="card-action github" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Code
+            </a>
           </div>
         </div>
-
-        <div class="portfolio-detail">
-          <p class="numb">04</p>
-          <h3>Full Stack Project</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem
-            nulla sunt, dolores quo sint nobis autem magnam at, cupiditate id
-            sapiente necessitatibus, reprehenderit animi alias dolore obcaecati
-            fugit expedita.
-          </p>
-          <div class="tech">
-            <p>MongoDB, Express.js, AngularJS, Node.js</p>
-          </div>
-
-          <div class="live-github">
-            <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
-          </div>
-        </div>
-
-        <div class="portfolio-detail">
-          <p class="numb">05</p>
-          <h3>Frontend Project</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem
-            nulla sunt, dolores quo sint nobis autem magnam at, cupiditate id
-            sapiente necessitatibus, reprehenderit animi alias dolore obcaecati
-            fugit expedita.
-          </p>
-          <div class="tech">
-            <p>Vue.js, Tailwind CSS</p>
-          </div>
-
-          <div class="live-github">
-            <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
-          </div>
-        </div>
-        <div class="portfolio-detail">
-          <p class="numb">06</p>
-          <h3>Full Stack Project</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo rem
-            nulla sunt, dolores quo sint nobis autem magnam at, cupiditate id
-            sapiente necessitatibus, reprehenderit animi alias dolore obcaecati
-            fugit expedita.
-          </p>
-          <div class="tech">
-            <p>MongoDB, Express.js, Vue.js, Node.js</p>
-          </div>
-
-          <div class="live-github">
-            <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
-            <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
-          </div>
-        </div> -->
       </div>
-      <div class="portfolio-box">
-        <div class="portfolio-carousel">
-          <div class="img-slide">
-            <div class="img-item">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F2Pqndncryw?autoplay=1&loop=1&mute=1&playlist=F2Pqndncryw" title="GetMyURI Project Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
-            <div class="img-item">
-              <img src="images/qiskit_lsp.png" alt="Qiskit Linter VS Code Extension - Python and Qiskit code linting tool" loading="lazy" />
-            </div>
-            <!-- <div class="img-item">
-              <img src="images/portfolio3.jpg" alt="" />
-            </div> -->
-            <!-- <div class="img-item">
-              <img src="images/portfolio4.jpg" alt="" />
-            </div>
-            <div class="img-item">
-              <img src="images/portfolio5.jpg" alt="" />
-            </div>
-            <div class="img-item">
-              <img src="images/portfolio6.jpg" alt="" />
-            </div> -->
-          </div>
-        </div>
 
-        <div class="navigation">
-          <button class="arrow-left disabled"><i class="bx bx-chevron-left"></i></button>
-          <button class="arrow-right"><i class="bx bx-chevron-right"></i></button>
-        </div>
-
-
-      </div>
     </div>
   </section>
+
+  <!-- Project detail modal -->
+  <div class="project-modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+      <button class="modal-close" id="project-modal-close" aria-label="Close project details">&times;</button>
+      <div class="modal-body" id="modal-project-body"></div>
+    </div>
+  </div>
 
   <!-- contact section -->
   <section class="contact" id="contact" aria-label="Contact section">
