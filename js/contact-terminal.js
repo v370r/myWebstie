@@ -243,13 +243,92 @@
     }
   });
 
-  // Form submit feedback
-  if (form) {
-    form.addEventListener('submit', function () {
-      var btn = form.querySelector('.t-submit');
-      if (btn) {
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
+  // ---------- Form submission with error fallback ----------
+  var formSubmitFallback = document.getElementById('form-submit-fallback');
+  var btn = form ? form.querySelector('.t-submit') : null;
+
+  if (form && btn) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Disable button and show sending state
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+
+      var formData = new FormData(form);
+      var formAction = form.getAttribute('action');
+
+      // Try FormSubmit.co via fetch
+      var controller = new AbortController();
+      var timeout = setTimeout(function () { controller.abort(); }, 10000);
+
+      fetch(formAction, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal
+      })
+      .then(function (response) {
+        clearTimeout(timeout);
+        if (response.ok || response.status === 200) {
+          showSuccess();
+        } else {
+          showFallback();
+        }
+      })
+      .catch(function () {
+        clearTimeout(timeout);
+        showFallback();
+      });
+
+      function showSuccess() {
+        var out = document.getElementById('t-output');
+        if (out) {
+          out.innerHTML = '';
+          appendOutput([
+            { text: '$ ./send_message', cls: '' },
+            { text: '✓ Message sent successfully!', cls: 't-out-success' },
+            { text: '  I\'ll get back to you within 24 hours.', cls: 't-out-info' },
+          ]);
+        }
+        form.reset();
+        btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg> ./send_message';
+        btn.disabled = false;
+      }
+
+      function showFallback() {
+        var out = document.getElementById('t-output');
+        if (out) {
+          out.innerHTML = '';
+          appendOutput([
+            { text: '$ ./send_message', cls: '' },
+            { text: '⚠ FormSubmit is temporarily unavailable.', cls: 't-out-error' },
+            { text: '', cls: '' },
+            { text: 'Don\'t worry — you can still reach me:', cls: 't-out-info' },
+            { text: '  ✉  vijaykumarpolojuofficial@gmail.com', cls: 't-out-success' },
+            { text: '  ✆  +1 (303) 901-0415', cls: 't-out-success' },
+            { text: '  💬  wa.me/13039010415', cls: 't-out-success' },
+            { text: '', cls: '' },
+            { text: '  Or copy the message below and email me directly:', cls: 't-out-info' },
+          ]);
+
+          // Show a copyable version of the message
+          var name = document.getElementById('ct-name').value || 'N/A';
+          var email = document.getElementById('ct-email').value || 'N/A';
+          var subject = document.getElementById('ct-subject').value || 'N/A';
+          var message = document.getElementById('ct-message').value || 'N/A';
+
+          appendOutput([
+            { text: '---', cls: 't-out-info' },
+            { text: 'From: ' + name + ' <' + email + '>', cls: '' },
+            { text: 'Subject: ' + subject, cls: '' },
+            { text: message, cls: '' },
+            { text: '---', cls: 't-out-info' },
+          ]);
+        }
+
+        btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg> ./send_message';
+        btn.disabled = false;
       }
     });
   }
