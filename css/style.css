@@ -2046,6 +2046,68 @@ section.active {
 
 .rag-arrow { color: #333; font-size: 0.8rem; }
 
+/* LeetCard flashcard preview */
+.leetcard-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+}
+
+.lc-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.75rem;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.lc-card-header {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.lc-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.lc-tag.easy { background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.2); color: #34d399; }
+.lc-tag.array { background: rgba(99,179,237,0.1); border: 1px solid rgba(99,179,237,0.18); color: #63b3ed; }
+.lc-tag.spaced { background: rgba(160,120,240,0.1); border: 1px solid rgba(160,120,240,0.18); color: #a78bfa; }
+
+.lc-card-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.lc-card-body {
+    font-size: 0.7rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.lc-card-footer {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.lc-progress {
+    font-family: 'Courier New', monospace;
+    font-size: 0.6rem;
+    color: #34d399;
+}
+
+.lc-progress.r { color: #f59e0b; }
+
 /* Card info area */
 .project-card-info {
     padding: 1rem 1.2rem;

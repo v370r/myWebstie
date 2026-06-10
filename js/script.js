@@ -478,6 +478,33 @@ if (modalOverlay) {
 const projectData = [
   {
     number: '#01',
+    title: 'LeetCard',
+    tagline: 'A spaced-repetition flashcard app for LeetCode practice. Serves daily 10-question sessions, tracks known vs. review progress in localStorage, and surfaces harder questions more often using a weighted scheduling algorithm.',
+    description: [
+      'Built a Next.js App Router app that reads a Markdown question bank server-side and renders interactive flashcard sessions entirely in the browser',
+      'Implemented spaced repetition scheduling — known questions are de-prioritized while review-flagged questions resurface more frequently, reducing time wasted on already-mastered problems',
+      'Each card reveals a prompt, hint, answer, code snippets in Java and Python, common mistakes, and a self-check question on demand',
+      'Persists session state and question familiarity scores in localStorage with no backend required, keeping the app fast and zero-cost to run',
+      'Question bank is a plain Markdown file committed alongside the code, making it trivial to add new problems or adjust difficulty without touching application logic',
+      'Deployed on Vercel at leetcard.cc with automatic CI from the GitHub repo'
+    ],
+    metrics: [
+      { value: 'Daily', label: '10-Q Sessions' },
+      { value: 'Spaced', label: 'Repetition' },
+      { value: 'Zero', label: 'Backend' },
+      { value: 'Vercel', label: 'Deployment' }
+    ],
+    tech: ['Next.js', 'React', 'App Router', 'Markdown', 'localStorage', 'Vercel', 'JavaScript'],
+    architecture: {
+      type: 'leetcard'
+    },
+    liveUrl: 'https://leetcard.cc',
+    liveLabel: 'Live Site',
+    codeUrl: 'https://github.com/v370r/leetcard',
+    codeLabel: 'GitHub Repo'
+  },
+  {
+    number: '#02',
     title: 'GetMyURI',
     tagline: 'A high-performance URL shortening platform handling 200K+ requests per second, deployed on Google Kubernetes Engine with enterprise-grade features like custom aliases, password protection, and location-based access control.',
     description: [
@@ -509,7 +536,7 @@ const projectData = [
     codeLabel: 'GitHub Repo'
   },
   {
-    number: '#02',
+    number: '#03',
     title: 'Qiskit-Linter',
     tagline: 'A VS Code extension that provides real-time linting and code analysis for quantum computing programs written with Qiskit, helping developers catch errors before running on expensive quantum hardware.',
     description: [
@@ -536,7 +563,7 @@ const projectData = [
     codeLabel: 'GitHub Repo'
   },
   {
-    number: '#03',
+    number: '#04',
     title: 'Pwin.ai — CS Capstone',
     tagline: 'An agentic RAG (Retrieval-Augmented Generation) pipeline built with LangChain and LangGraph, featuring pgvector for semantic search, FAISS for fast similarity matching, and intelligent document processing for complex technical documents.',
     description: [
@@ -604,6 +631,24 @@ const buildProjectModalContent = (project) => {
         <div class="rag-step o">pgvector</div><div class="rag-arrow">→</div>
         <div class="rag-step g">RAG</div><div class="rag-arrow">→</div>
         <div class="rag-step p">Agent</div>
+      </div>
+    </div>`;
+  } else if (project.architecture.type === 'leetcard') {
+    archHTML = `<div class="modal-arch-diagram">
+      <div class="leetcard-preview" style="width:100%;height:auto;">
+        <div class="lc-card" style="max-width:320px;margin:0 auto;">
+          <div class="lc-card-header">
+            <span class="lc-tag easy">Easy</span>
+            <span class="lc-tag array">Array</span>
+            <span class="lc-tag spaced">Spaced Rep</span>
+          </div>
+          <div class="lc-card-title">Two Sum</div>
+          <div class="lc-card-body">What value to look up while scanning the array?</div>
+          <div class="lc-card-footer">
+            <span class="lc-progress">★ Known: 12</span>
+            <span class="lc-progress r">↺ Review: 4</span>
+          </div>
+        </div>
       </div>
     </div>`;
   }
